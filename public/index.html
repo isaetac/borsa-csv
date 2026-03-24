@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hisse Tablosu</title>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <style>
+    :root{
+      --bg:#081225;
+      --panel:#0d172b;
+      --line:#1c2a45;
+      --text:#e5e7eb;
+      --muted:#93a4bf;
+      --green:#22c55e;
+      --red:#ef4444;
+      --amber:#f59e0b;
+      --blue:#60a5fa;
+      --white:#ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    .container {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      padding: 14px 18px 10px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #07132b 0%, #09162d 100%);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .stat-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px 12px;
+      min-width: 120px;
+    }
+
+    .stat-label {
+      display: block;
+      font-size: 11px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .stat-value {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .quick-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    input, select, button {
+      padding: 9px 11px;
+      border-radius: 8px;
+      border: 1px solid #2a3a58;
+      background: #0c1629;
+      color: var(--text);
+      font-size: 12px;
+    }
+
+    input {
+      min-width: 220px;
+    }
+
+    button {
+      cursor: pointer;
+      background: #0f1d34;
+    }
+
+    button:hover {
+      background: #15233d;
+    }
+
+    .quick-btn.active {
+      border-color: #4f78c7;
+      background: #17325a;
+      color: var(--white);
+    }
+
+    .table-wrap {
+      overflow: auto;
+      width: 100%;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1700px;
+      font-size: 12px;
+    }
+
+    thead th {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(28, 42, 69, 0.98);
+      color: var(--white);
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid #2b3d60;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    thead th:hover {
+      background: #223352;
+    }
+
+    tbody td {
+      padding: 7px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      white-space: nowrap;
+    }
+
+    tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+
+    .symbol {
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .pos {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .neg {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .flat {
+      color: var(--muted);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 999px;
+      border: 1px solid #2b3d60;
+      color: #c5d2e6;
+      background: #0c1629;
+      font-size: 11px;
+      margin-right: 4px;
+    }
+
+    .market-state {
+      font-weight: 700;
+    }
+
+    .state-open { color: var(--green); }
+    .state-closed { color: var(--muted); }
+    .state-post { color: var(--amber); }
+    .state-pre { color: var(--blue); }
+
+    .right {
+      text-align: right;
+    }
+
+    .sort-indicator {
+      margin-left: 6px;
+      color: #9fb0ca;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Hisse Tablosu</h1>
+      <div class="meta" id="meta">Yükleniyor...</div>
+
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-label">Toplam</span>
+          <span class="stat-value" id="statTotal">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">BIST</span>
+          <span class="stat-value" id="statBist">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">NASDAQ</span>
+          <span class="stat-value" id="statNasdaq">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">SP500</span>
+          <span class="stat-value" id="statSp500">0</span>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input id="search" placeholder="Sembol veya şirket ara..." />
+        <select id="marketFilter">
+          <option value="">Tümü</option>
+          <option value="BIST">BIST</option>
+          <option value="NASDAQ">NASDAQ</option>
+          <option value="SP500">SP500</option>
+        </select>
+        <select id="trendFilter">
+          <option value="">Hepsi</option>
+          <option value="up">Yükselenler</option>
+          <option value="down">Düşenler</option>
+          <option value="flat">Değişmeyenler</option>
+        </select>
+        <select id="refreshSelect">
+          <option value="0">Otomatik yenileme kapalı</option>
+          <option value="30">30 sn</option>
+          <option value="60" selected>60 sn</option>
+          <option value="300">5 dk</option>
+        </select>
+        <button id="reloadBtn">Yenile</button>
+      </div>
+
+      <div class="quick-toolbar">
+        <button class="quick-btn active" id="showAllBtn">Tümünü Göster</button>
+        <button class="quick-btn" id="topGainersBtn">En Çok Yükselen 20</button>
+        <button class="quick-btn" id="topLosersBtn">En Çok Düşen 20</button>
+        <button class="quick-btn" id="topVolumeBtn">En Hacimli 20</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="stocksTable">
+        <thead>
+          <tr>
+            <th data-key="market">Market <span class="sort-indicator"></span></th>
+            <th data-key="symbol">Sembol <span class="sort-indicator"></span></th>
+            <th data-key="display_name">Şirket <span class="sort-indicator"></span></th>
+            <th data-key="universe_tags">Etiket <span class="sort-indicator"></span></th>
+            <th data-key="last" class="right">Son <span class="sort-indicator"></span></th>
+            <th data-key="change" class="right">Değişim <span class="sort-indicator"></span></th>
+            <th data-key="change_percent" class="right">Değişim % <span class="sort-indicator"></span></th>
+            <th data-key="volume" class="right">Hacim <span class="sort-indicator"></span></th>
+            <th data-key="open" class="right">Açılış <span class="sort-indicator"></span></th>
+            <th data-key="high" class="right">Yüksek <span class="sort-indicator"></span></th>
+            <th data-key="low" class="right">Düşük <span class="sort-indicator"></span></th>
+            <th data-key="prev_close" class="right">Önceki Kapanış <span class="sort-indicator"></span></th>
+            <th data-key="currency">Para Birimi <span class="sort-indicator"></span></th>
+            <th data-key="exchange_name">Borsa <span class="sort-indicator"></span></th>
+            <th data-key="market_state">Piyasa Durumu <span class="sort-indicator"></span></th>
+            <th data-key="market_time">Piyasa Zamanı <span class="sort-indicator"></span></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const tableBody = document.querySelector("#stocksTable tbody");
+    const searchInput = document.getElementById("search");
+    const marketFilter = document.getElementById("marketFilter");
+    const trendFilter = document.getElementById("trendFilter");
+    const refreshSelect = document.getElementById("refreshSelect");
+    const reloadBtn = document.getElementById("reloadBtn");
+    const meta = document.getElementById("meta");
+
+    const statTotal = document.getElementById("statTotal");
+    const statBist = document.getElementById("statBist");
+    const statNasdaq = document.getElementById("statNasdaq");
+    const statSp500 = document.getElementById("statSp500");
+
+    const showAllBtn = document.getElementById("showAllBtn");
+    const topGainersBtn = document.getElementById("topGainersBtn");
+    const topLosersBtn = document.getElementById("topLosersBtn");
+    const topVolumeBtn = document.getElementById("topVolumeBtn");
+
+    let allRows = [];
+    let filteredRows = [];
+    let sortKey = "market";
+    let sortDirection = "asc";
+    let refreshTimer = null;
+    let quickMode = "all";
+
+    function parseNumber(v) {
+      if (v === null || v === undefined || v === "") return null;
+      const n = Number(v);
+      return Number.isNaN(n) ? null : n;
+    }
+
+    function fmtNumber(v, digits = 2) {
+      const n = parseNumber(v);
+      if (n === null) return "";
+      return n.toLocaleString("tr-TR", {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: digits
+      });
+    }
+
+    function fmtInteger(v) {
+      const n = parseNumber(v);
+      if (n === null) return "";
+      return n.toLocaleString("tr-TR", {
+        maximumFractionDigits: 0
+      });
+    }
+
+    function signClass(v) {
+      const n = parseNumber(v);
+      if (n === null || n === 0) return "flat";
+      return n > 0 ? "pos" : "neg";
+    }
+
+    function marketStateLabel(v) {
+      const state = String(v || "").toUpperCase();
+      const map = {
+        "REGULAR": "Açık",
+        "CLOSED": "Kapalı",
+        "PRE": "Seans Öncesi",
+        "PREPRE": "Seans Öncesi",
+        "POST": "Seans Sonrası",
+        "POSTPOST": "Seans Sonrası"
+      };
+      return map[state] || state || "";
+    }
+
+    function marketStateClass(v) {
+      const state = String(v || "").toUpperCase();
+      if (state.includes("POST")) return "state-post";
+      if (state.includes("PRE")) return "state-pre";
+      if (state === "REGULAR") return "state-open";
+      return "state-closed";
+    }
+
+    function exchangeLabel(v, market) {
+      if (!v) {
+        if (market === "BIST") return "Borsa Istanbul";
+        if (market === "NASDAQ") return "NASDAQ";
+        if (market === "SP500") return "US Market";
+        return "";
+      }
+      if (String(v).toLowerCase() === "istanbul") return "Borsa Istanbul";
+      return v;
+    }
+
+    function fmtDateTime(v) {
+      if (!v) return "";
+
+      const s = String(v).trim();
+
+      if (/^\d{10}$/.test(s)) {
+        const d = new Date(Number(s) * 1000);
+        if (!Number.isNaN(d.getTime())) return d.toLocaleString("tr-TR");
+      }
+
+      if (/^\d{13}$/.test(s)) {
+        const d = new Date(Number(s));
+        if (!Number.isNaN(d.getTime())) return d.toLocaleString("tr-TR");
+      }
+
+      const d = new Date(s);
+      if (!Number.isNaN(d.getTime())) return d.toLocaleString("tr-TR");
+
+      return s;
+    }
+
+    function renderTags(value) {
+      if (!value) return "";
+      return String(value)
+        .split(";")
+        .filter(Boolean)
+        .map(tag => `<span class="tag">${tag}</span>`)
+        .join("");
+    }
+
+    function compareValues(a, b, key) {
+      const aNum = parseNumber(a[key]);
+      const bNum = parseNumber(b[key]);
+
+      if (aNum !== null && bNum !== null) return aNum - bNum;
+
+      const aVal = (a[key] ?? "").toString().toLowerCase();
+      const bVal = (b[key] ?? "").toString().toLowerCase();
+
+      if (aVal < bVal) return -1;
+      if (aVal > bVal) return 1;
+      return 0;
+    }
+
+    function sortRows(rows) {
+      return [...rows].sort((a, b) => {
+        const cmp = compareValues(a, b, sortKey);
+        return sortDirection === "asc" ? cmp : -cmp;
+      });
+    }
+
+    function updateSortIndicators() {
+      document.querySelectorAll("thead th").forEach(th => {
+        const span = th.querySelector(".sort-indicator");
+        if (!span) return;
+        const key = th.dataset.key;
+        if (key === sortKey && quickMode === "all") {
+          span.textContent = sortDirection === "asc" ? "▲" : "▼";
+        } else {
+          span.textContent = "";
+        }
+      });
+    }
+
+    function updateQuickButtons() {
+      document.querySelectorAll(".quick-btn").forEach(btn => btn.classList.remove("active"));
+
+      if (quickMode === "all") showAllBtn.classList.add("active");
+      if (quickMode === "gainers") topGainersBtn.classList.add("active");
+      if (quickMode === "losers") topLosersBtn.classList.add("active");
+      if (quickMode === "volume") topVolumeBtn.classList.add("active");
+    }
+
+    function render(rows) {
+      tableBody.innerHTML = rows.map(r => `
+        <tr>
+          <td>${r.market || ""}</td>
+          <td class="symbol">${r.symbol || ""}</td>
+          <td>${r.display_name || ""}</td>
+          <td>${renderTags(r.universe_tags)}</td>
+          <td class="right">${fmtNumber(r.last)}</td>
+          <td class="right ${signClass(r.change)}">${fmtNumber(r.change)}</td>
+          <td class="right ${signClass(r.change_percent)}">${fmtNumber(r.change_percent)}%</td>
+          <td class="right">${fmtInteger(r.volume)}</td>
+          <td class="right">${fmtNumber(r.open)}</td>
+          <td class="right">${fmtNumber(r.high)}</td>
+          <td class="right">${fmtNumber(r.low)}</td>
+          <td class="right">${fmtNumber(r.prev_close)}</td>
+          <td>${r.currency || ""}</td>
+          <td>${exchangeLabel(r.exchange_name, r.market)}</td>
+          <td class="market-state ${marketStateClass(r.market_state)}">${marketStateLabel(r.market_state)}</td>
+          <td>${fmtDateTime(r.market_time)}</td>
+        </tr>
+      `).join("");
+    }
+
+    function updateStats(rows) {
+      statTotal.textContent = rows.length.toLocaleString("tr-TR");
+      statBist.textContent = rows.filter(r => r.market === "BIST").length.toLocaleString("tr-TR");
+      statNasdaq.textContent = rows.filter(r => r.market === "NASDAQ").length.toLocaleString("tr-TR");
+      statSp500.textContent = rows.filter(r => (r.universe_tags || "").includes("SP500")).length.toLocaleString("tr-TR");
+    }
+
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
+      const market = marketFilter.value;
+      const trend = trendFilter.value;
+
+      filteredRows = allRows.filter(r => {
+        const text = `${r.symbol || ""} ${r.display_name || ""} ${r.universe_tags || ""}`.toLowerCase();
+        const okSearch = !q || text.includes(q);
+        const okMarket = !market || r.market === market || (market === "SP500" && String(r.universe_tags || "").includes("SP500"));
+
+        const changePct = parseNumber(r.change_percent);
+        let okTrend = true;
+
+        if (trend === "up") okTrend = changePct !== null && changePct > 0;
+        else if (trend === "down") okTrend = changePct !== null && changePct < 0;
+        else if (trend === "flat") okTrend = changePct !== null && changePct === 0;
+
+        return okSearch && okMarket && okTrend;
+      });
+
+      if (quickMode === "gainers") {
+        filteredRows = [...filteredRows]
+          .filter(r => parseNumber(r.change_percent) !== null)
+          .sort((a, b) => (parseNumber(b.change_percent) ?? -Infinity) - (parseNumber(a.change_percent) ?? -Infinity))
+          .slice(0, 20);
+      } else if (quickMode === "losers") {
+        filteredRows = [...filteredRows]
+          .filter(r => parseNumber(r.change_percent) !== null)
+          .sort((a, b) => (parseNumber(a.change_percent) ?? Infinity) - (parseNumber(b.change_percent) ?? Infinity))
+          .slice(0, 20);
+      } else if (quickMode === "volume") {
+        filteredRows = [...filteredRows]
+          .filter(r => parseNumber(r.volume) !== null)
+          .sort((a, b) => (parseNumber(b.volume) ?? -Infinity) - (parseNumber(a.volume) ?? -Infinity))
+          .slice(0, 20);
+      } else {
+        filteredRows = sortRows(filteredRows);
+      }
+
+      render(filteredRows);
+      updateSortIndicators();
+      updateQuickButtons();
+
+      const now = new Date();
+      let extra = "";
+      if (quickMode === "gainers") extra = " • Hızlı görünüm: En Çok Yükselen 20";
+      if (quickMode === "losers") extra = " • Hızlı görünüm: En Çok Düşen 20";
+      if (quickMode === "volume") extra = " • Hızlı görünüm: En Hacimli 20";
+
+      meta.textContent = `Gösterilen: ${filteredRows.length.toLocaleString("tr-TR")} / ${allRows.length.toLocaleString("tr-TR")} • Son yenileme: ${now.toLocaleTimeString("tr-TR")}${extra}`;
+    }
+
+    async function loadCsv() {
+      meta.textContent = "CSV yükleniyor...";
+      const res = await fetch(`latest.csv?ts=${Date.now()}`);
+      const text = await res.text();
+
+      const parsed = Papa.parse(text, {
+        header: true,
+        skipEmptyLines: true
+      });
+
+      allRows = parsed.data;
+      updateStats(allRows);
+      applyFilters();
+    }
+
+    function setupAutoRefresh() {
+      if (refreshTimer) clearInterval(refreshTimer);
+      const seconds = Number(refreshSelect.value);
+
+      if (seconds > 0) {
+        refreshTimer = setInterval(async () => {
+          await loadCsv();
+        }, seconds * 1000);
+      }
+    }
+
+    document.querySelectorAll("thead th").forEach(th => {
+      th.addEventListener("click", () => {
+        const key = th.dataset.key;
+        if (!key) return;
+
+        quickMode = "all";
+
+        if (sortKey === key) {
+          sortDirection = sortDirection === "asc" ? "desc" : "asc";
+        } else {
+          sortKey = key;
+          sortDirection = ["last", "change", "change_percent", "volume", "open", "high", "low", "prev_close"].includes(key)
+            ? "desc"
+            : "asc";
+        }
+
+        applyFilters();
+      });
+    });
+
+    showAllBtn.addEventListener("click", () => {
+      quickMode = "all";
+      applyFilters();
+    });
+
+    topGainersBtn.addEventListener("click", () => {
+      quickMode = "gainers";
+      applyFilters();
+    });
+
+    topLosersBtn.addEventListener("click", () => {
+      quickMode = "losers";
+      applyFilters();
+    });
+
+    topVolumeBtn.addEventListener("click", () => {
+      quickMode = "volume";
+      applyFilters();
+    });
+
+    reloadBtn.addEventListener("click", async () => {
+      await loadCsv();
+    });
+
+    searchInput.addEventListener("input", applyFilters);
+    marketFilter.addEventListener("change", applyFilters);
+    trendFilter.addEventListener("change", applyFilters);
+    refreshSelect.addEventListener("change", setupAutoRefresh);
+
+    loadCsv();
+    setupAutoRefresh();
+  </script>
+</body>
+</html>

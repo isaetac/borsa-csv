@@ -1,0 +1,5 @@
+pandas
+requests
+yahooquery
+lxml
+beautifulsoup4
