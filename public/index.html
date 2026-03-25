@@ -23,7 +23,7 @@
       --radius: 16px;
       --market-col-width: 92px;
       --symbol-col-width: 118px;
-      --table-max-height: 72vh;
+      --table-width: 2210px;
     }
 
     * {
@@ -212,68 +212,71 @@
       text-align: right;
     }
 
-    .table-wrap {
-      width: 100%;
-      max-height: var(--table-max-height);
-      overflow: auto;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: contain;
-      background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(11, 19, 36, 0.98));
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    .table-shell {
       position: relative;
     }
 
-    #stocksTable {
-      width: 100%;
-      min-width: 1540px;
+    .table-header-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 70;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-bottom: 0;
+      border-radius: var(--radius) var(--radius) 0 0;
+      background: linear-gradient(180deg, rgba(22, 34, 53, 0.98), rgba(16, 27, 45, 0.98));
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .table-body-wrap {
+      overflow-x: auto;
+      overflow-y: visible;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+      border: 1px solid var(--border);
+      border-top: 0;
+      border-radius: 0 0 var(--radius) var(--radius);
+      background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(11, 19, 36, 0.98));
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    }
+
+    .stocks-table {
+      width: var(--table-width);
+      min-width: var(--table-width);
+      table-layout: fixed;
       border-collapse: separate;
       border-spacing: 0;
-      position: relative;
     }
 
-    #stocksTable th,
-    #stocksTable td {
+    .stocks-table th,
+    .stocks-table td {
       padding: 12px 10px;
       border-bottom: 1px solid rgba(148, 163, 184, 0.12);
       vertical-align: middle;
       white-space: nowrap;
+      background-clip: padding-box;
     }
 
-    #stocksTable thead th {
-      position: sticky;
-      top: 0;
-      z-index: 50;
+    .stocks-table thead th {
       background: linear-gradient(180deg, #162235 0%, #101b2d 100%);
       color: var(--text);
       font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 0.04em;
-      box-shadow:
-        inset 0 -1px 0 rgba(148, 163, 184, 0.16),
-        0 1px 0 rgba(0, 0, 0, 0.18);
+      box-shadow: inset 0 -1px 0 rgba(148, 163, 184, 0.16);
       cursor: pointer;
       user-select: none;
     }
 
-    #stocksTable thead th:first-child {
-      border-top-left-radius: 14px;
-    }
-
-    #stocksTable thead th:last-child {
-      border-top-right-radius: 14px;
-    }
-
-    #stocksTable tbody tr:nth-child(even) {
+    #stocksTable tbody tr:nth-child(even) td {
       background: rgba(255, 255, 255, 0.016);
     }
 
-    #stocksTable tbody tr:hover {
+    #stocksTable tbody tr:hover td {
       background: rgba(37, 99, 235, 0.09);
     }
 
-    #stocksTable .right {
+    .stocks-table .right {
       text-align: right;
     }
 
@@ -290,7 +293,6 @@
     }
 
     .company {
-      min-width: 240px;
       white-space: normal;
       line-height: 1.35;
     }
@@ -336,41 +338,34 @@
     .col-market,
     .col-symbol {
       position: sticky;
-      background: inherit;
     }
 
-    thead .col-market {
+    .col-market {
       left: 0;
-      width: var(--market-col-width);
-      min-width: var(--market-col-width);
-      z-index: 60;
+      z-index: 30;
       box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
-    tbody .col-market {
-      left: 0;
-      width: var(--market-col-width);
-      min-width: var(--market-col-width);
-      z-index: 20;
+    .col-symbol {
+      left: var(--market-col-width);
+      z-index: 30;
+      box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
+    }
+
+    #stocksHeaderTable thead .col-market,
+    #stocksHeaderTable thead .col-symbol {
+      z-index: 80;
+      background: linear-gradient(180deg, #162235 0%, #101b2d 100%);
+    }
+
+    #stocksTable tbody .col-market {
       background: #0f1828;
-      box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
-    }
-
-    thead .col-symbol {
-      left: var(--market-col-width);
-      width: var(--symbol-col-width);
-      min-width: var(--symbol-col-width);
-      z-index: 60;
-      box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
-    }
-
-    tbody .col-symbol {
-      left: var(--market-col-width);
-      width: var(--symbol-col-width);
-      min-width: var(--symbol-col-width);
       z-index: 20;
+    }
+
+    #stocksTable tbody .col-symbol {
       background: #0e1726;
-      box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
+      z-index: 20;
     }
 
     .loading,
@@ -420,14 +415,10 @@
         text-align: left;
       }
 
-      #stocksTable th,
-      #stocksTable td {
+      .stocks-table th,
+      .stocks-table td {
         padding: 10px 8px;
         font-size: 13px;
-      }
-
-      .table-wrap {
-        max-height: 68vh;
       }
     }
 
@@ -437,9 +428,17 @@
       }
 
       .header-card,
-      .stat-card,
-      .table-wrap {
+      .table-header-wrap,
+      .table-body-wrap {
         border-radius: 14px;
+      }
+
+      .table-header-wrap {
+        border-radius: 14px 14px 0 0;
+      }
+
+      .table-body-wrap {
+        border-radius: 0 0 14px 14px;
       }
 
       .subline,
@@ -447,20 +446,16 @@
       .table-note {
         font-size: 13px;
       }
-
-      .table-wrap {
-        max-height: 64vh;
-      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="top-controls" id="topControls">
+    <div class="top-controls">
       <div class="header-card">
         <h1>Hisse Tablosu</h1>
         <div class="subline">
-          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • tablo içinde sabit başlıklar ve mobil uyumlu kullanım
+          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • ayrı yapışkan başlık sistemi ve mobil uyumlu kullanım
         </div>
 
         <div class="stats-grid">
@@ -518,44 +513,89 @@
 
         <div class="meta-row">
           <div id="meta">Yükleniyor...</div>
-          <div class="table-note">İpucu: Başlıklar artık tablonun içinde sabit kalır. Dikey kaydırmayı tablo alanında yap.</div>
+          <div class="table-note">İpucu: Başlık satırı artık ayrı bir katman. Sayfayı aşağı kaydırınca sabit kalır; yatay kaydırma otomatik senkron çalışır.</div>
         </div>
       </div>
     </div>
 
-    <div class="table-wrap" id="tableWrap">
-      <table id="stocksTable">
-        <thead>
-          <tr>
-            <th class="col-market" data-key="market">Market <span class="sort-indicator"></span></th>
-            <th class="col-symbol" data-key="symbol">Sembol <span class="sort-indicator"></span></th>
-            <th data-key="display_name">Şirket <span class="sort-indicator"></span></th>
-            <th data-key="universe_tags">Etiket <span class="sort-indicator"></span></th>
-            <th data-key="last" class="right">Son <span class="sort-indicator"></span></th>
-            <th data-key="change" class="right">Değişim <span class="sort-indicator"></span></th>
-            <th data-key="change_percent" class="right">Değişim % <span class="sort-indicator"></span></th>
-            <th data-key="volume" class="right">Hacim <span class="sort-indicator"></span></th>
-            <th data-key="open" class="right">Açılış <span class="sort-indicator"></span></th>
-            <th data-key="high" class="right">Yüksek <span class="sort-indicator"></span></th>
-            <th data-key="low" class="right">Düşük <span class="sort-indicator"></span></th>
-            <th data-key="prev_close" class="right">Önceki Kapanış <span class="sort-indicator"></span></th>
-            <th data-key="currency">Para Birimi <span class="sort-indicator"></span></th>
-            <th data-key="exchange_name">Borsa <span class="sort-indicator"></span></th>
-            <th data-key="market_state">Piyasa Durumu <span class="sort-indicator"></span></th>
-            <th data-key="market_time">Piyasa Zamanı <span class="sort-indicator"></span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td colspan="16" class="loading">CSV yükleniyor...</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="table-shell">
+      <div class="table-header-wrap" id="tableHeaderWrap">
+        <table id="stocksHeaderTable" class="stocks-table">
+          <colgroup>
+            <col style="width: 92px;" />
+            <col style="width: 118px;" />
+            <col style="width: 280px;" />
+            <col style="width: 180px;" />
+            <col style="width: 110px;" />
+            <col style="width: 120px;" />
+            <col style="width: 120px;" />
+            <col style="width: 150px;" />
+            <col style="width: 110px;" />
+            <col style="width: 110px;" />
+            <col style="width: 110px;" />
+            <col style="width: 150px;" />
+            <col style="width: 120px;" />
+            <col style="width: 160px;" />
+            <col style="width: 150px;" />
+            <col style="width: 190px;" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th class="col-market" data-key="market">Market <span class="sort-indicator"></span></th>
+              <th class="col-symbol" data-key="symbol">Sembol <span class="sort-indicator"></span></th>
+              <th data-key="display_name">Şirket <span class="sort-indicator"></span></th>
+              <th data-key="universe_tags">Etiket <span class="sort-indicator"></span></th>
+              <th data-key="last" class="right">Son <span class="sort-indicator"></span></th>
+              <th data-key="change" class="right">Değişim <span class="sort-indicator"></span></th>
+              <th data-key="change_percent" class="right">Değişim % <span class="sort-indicator"></span></th>
+              <th data-key="volume" class="right">Hacim <span class="sort-indicator"></span></th>
+              <th data-key="open" class="right">Açılış <span class="sort-indicator"></span></th>
+              <th data-key="high" class="right">Yüksek <span class="sort-indicator"></span></th>
+              <th data-key="low" class="right">Düşük <span class="sort-indicator"></span></th>
+              <th data-key="prev_close" class="right">Önceki Kapanış <span class="sort-indicator"></span></th>
+              <th data-key="currency">Para Birimi <span class="sort-indicator"></span></th>
+              <th data-key="exchange_name">Borsa <span class="sort-indicator"></span></th>
+              <th data-key="market_state">Piyasa Durumu <span class="sort-indicator"></span></th>
+              <th data-key="market_time">Piyasa Zamanı <span class="sort-indicator"></span></th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+
+      <div class="table-body-wrap" id="tableBodyWrap">
+        <table id="stocksTable" class="stocks-table">
+          <colgroup>
+            <col style="width: 92px;" />
+            <col style="width: 118px;" />
+            <col style="width: 280px;" />
+            <col style="width: 180px;" />
+            <col style="width: 110px;" />
+            <col style="width: 120px;" />
+            <col style="width: 120px;" />
+            <col style="width: 150px;" />
+            <col style="width: 110px;" />
+            <col style="width: 110px;" />
+            <col style="width: 110px;" />
+            <col style="width: 150px;" />
+            <col style="width: 120px;" />
+            <col style="width: 160px;" />
+            <col style="width: 150px;" />
+            <col style="width: 190px;" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <td colspan="16" class="loading">CSV yükleniyor...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 
   <script>
     const tableBody = document.querySelector("#stocksTable tbody");
+    const tableHeaderWrap = document.getElementById("tableHeaderWrap");
+    const tableBodyWrap = document.getElementById("tableBodyWrap");
     const searchInput = document.getElementById("search");
     const marketFilter = document.getElementById("marketFilter");
     const trendFilter = document.getElementById("trendFilter");
@@ -719,7 +759,7 @@
     }
 
     function updateSortIndicators() {
-      document.querySelectorAll("#stocksTable thead th").forEach(th => {
+      document.querySelectorAll("#stocksHeaderTable thead th").forEach(th => {
         const span = th.querySelector(".sort-indicator");
         if (!span) return;
         const key = th.dataset.key;
@@ -897,7 +937,13 @@
       }
     }
 
-    document.querySelectorAll("#stocksTable thead th").forEach(th => {
+    function syncHeaderScroll() {
+      tableHeaderWrap.scrollLeft = tableBodyWrap.scrollLeft;
+    }
+
+    tableBodyWrap.addEventListener("scroll", syncHeaderScroll, { passive: true });
+
+    document.querySelectorAll("#stocksHeaderTable thead th").forEach(th => {
       th.addEventListener("click", () => {
         const key = th.dataset.key;
         if (!key) return;
