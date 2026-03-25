@@ -25,7 +25,7 @@
       --market-col-width: 92px;
       --symbol-col-width: 118px;
       --frozen-width: 210px;
-      --main-table-width: 1900px;
+      --main-table-width: 1720px;
       --header-bg: linear-gradient(180deg, #162235 0%, #101b2d 100%);
       --frozen-bg: #0f1828;
       --frozen-bg-2: #0d1625;
@@ -325,26 +325,17 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+      font-weight: 500;
     }
 
-    .tags-cell {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+    .pane-table th,
+    .pane-table td {
+      text-align: left;
     }
 
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      background: rgba(255, 255, 255, 0.04);
-      font-size: 12px;
-      margin-right: 4px;
-      white-space: nowrap;
-      vertical-align: middle;
+    .pane-table th.right,
+    .pane-table td.right {
+      text-align: right;
     }
 
     .pos { color: var(--green); font-weight: 700; }
@@ -407,7 +398,7 @@
       <div class="header-card">
         <h1>Hisse Tablosu</h1>
         <div class="subline">
-          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • ilk iki sütun sabit ve temiz görünüm
+          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • ilk iki sütun sabit ve sade hizalı görünüm
         </div>
 
         <div class="stats-grid">
@@ -430,7 +421,7 @@
         </div>
 
         <div class="toolbar">
-          <input id="search" class="grow" type="text" placeholder="Sembol, şirket veya etiket ara..." />
+          <input id="search" class="grow" type="text" placeholder="Sembol veya şirket ara..." />
 
           <select id="marketFilter" aria-label="Market filtresi">
             <option value="">Tümü</option>
@@ -465,7 +456,7 @@
 
         <div class="meta-row">
           <div id="meta">Yükleniyor...</div>
-          <div class="table-note">İlk iki sütun ayrı donduruldu; boşluk ve kayma temizlendi.</div>
+          <div class="table-note">İlk iki sütun sabit. Etiket sütunu kaldırıldı ve kolon hizaları sadeleştirildi.</div>
         </div>
       </div>
     </div>
@@ -490,8 +481,7 @@
         <div class="scroll-pane" id="headerScrollPane">
           <table id="mainHeaderTable" class="pane-table main-table">
             <colgroup>
-              <col style="width:280px" />
-              <col style="width:180px" />
+              <col style="width:320px" />
               <col style="width:110px" />
               <col style="width:120px" />
               <col style="width:120px" />
@@ -508,7 +498,6 @@
             <thead>
               <tr>
                 <th data-key="display_name">Şirket <span class="sort-indicator"></span></th>
-                <th data-key="universe_tags">Etiket <span class="sort-indicator"></span></th>
                 <th data-key="last" class="right">Son <span class="sort-indicator"></span></th>
                 <th data-key="change" class="right">Değişim <span class="sort-indicator"></span></th>
                 <th data-key="change_percent" class="right">Değişim % <span class="sort-indicator"></span></th>
@@ -543,8 +532,7 @@
         <div class="scroll-pane" id="bodyScrollPane">
           <table id="mainBodyTable" class="pane-table main-table">
             <colgroup>
-              <col style="width:280px" />
-              <col style="width:180px" />
+              <col style="width:320px" />
               <col style="width:110px" />
               <col style="width:120px" />
               <col style="width:120px" />
@@ -559,7 +547,7 @@
               <col style="width:190px" />
             </colgroup>
             <tbody>
-              <tr><td colspan="14" class="loading">CSV yükleniyor...</td></tr>
+              <tr><td colspan="13" class="loading">CSV yükleniyor...</td></tr>
             </tbody>
           </table>
         </div>
@@ -702,23 +690,6 @@
       return s;
     }
 
-    function renderTags(value, row) {
-      if (!value) return '';
-      const market = String(row?.market || '').trim().toUpperCase();
-      return String(value)
-        .split(';')
-        .map(s => s.trim())
-        .filter(Boolean)
-        .filter(tag => {
-          const upper = tag.toUpperCase();
-          if (market && upper === market) return false;
-          if (market === 'BIST' && (/^B[İI]ST$/iu.test(tag) || /^BORSA\s+ISTANBUL$/iu.test(tag))) return false;
-          if (market === 'NASDAQ' && /^NASDAQ$/iu.test(tag)) return false;
-          return true;
-        })
-        .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`)
-        .join('');
-    }
 
     function compareValues(a, b, key) {
       if (key === 'volume') {
@@ -783,7 +754,7 @@
     function render(rows) {
       if (!rows.length) {
         frozenBody.innerHTML = `<tr><td colspan="2" class="loading">Sonuç bulunamadı.</td></tr>`;
-        mainBody.innerHTML = `<tr><td colspan="14" class="loading">Sonuç bulunamadı.</td></tr>`;
+        mainBody.innerHTML = `<tr><td colspan="13" class="loading">Sonuç bulunamadı.</td></tr>`;
         return;
       }
 
@@ -797,7 +768,6 @@
       mainBody.innerHTML = rows.map(r => `
         <tr>
           <td class="company" title="${escapeHtml(cleanDisplayName(r))}">${escapeHtml(cleanDisplayName(r))}</td>
-          <td class="tags-cell">${renderTags(r.universe_tags, r)}</td>
           <td class="right">${fmtNumber(r.last)}</td>
           <td class="right ${signClass(r.change)}">${fmtNumber(r.change)}</td>
           <td class="right ${signClass(r.change_percent)}">${fmtNumber(r.change_percent)}%</td>
@@ -842,7 +812,7 @@
       const trend = trendFilter.value;
 
       filteredRows = allRows.filter(r => {
-        const text = `${r.symbol || ''} ${cleanDisplayName(r)} ${r.universe_tags || ''}`.toLowerCase();
+        const text = `${r.symbol || ''} ${cleanDisplayName(r)}`.toLowerCase();
         const okSearch = !q || text.includes(q);
         const okMarket = !market || r.market === market || (market === 'SP500' && String(r.universe_tags || '').includes('SP500'));
 
@@ -898,7 +868,7 @@
       } catch (err) {
         console.error(err);
         frozenBody.innerHTML = `<tr><td colspan="2" class="error">CSV yüklenemedi.</td></tr>`;
-        mainBody.innerHTML = `<tr><td colspan="14" class="error">Bağlantıyı veya latest.csv dosyasını kontrol et.</td></tr>`;
+        mainBody.innerHTML = `<tr><td colspan="13" class="error">Bağlantıyı veya latest.csv dosyasını kontrol et.</td></tr>`;
         meta.textContent = `Hata: ${err.message || 'Bilinmeyen hata'}`;
       } finally {
         reloadBtn.disabled = false;
