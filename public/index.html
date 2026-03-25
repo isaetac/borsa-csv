@@ -345,61 +345,65 @@
       position: sticky;
       overflow: hidden;
       background-clip: padding-box;
+      isolation: isolate;
+    }
+
+    .col-market::after,
+    .col-symbol::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: -1px;
+      width: 1px;
+      background: rgba(148, 163, 184, 0.16);
+      pointer-events: none;
     }
 
     .col-market {
       left: 0;
       z-index: 40;
       background: var(--sticky-market-bg) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-market-bg);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     .col-symbol {
       left: var(--market-col-width);
       z-index: 41;
       background: var(--sticky-symbol-bg) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-symbol-bg);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     #stocksHeaderTable thead .col-market,
     #stocksHeaderTable thead .col-symbol {
       z-index: 90;
       background: linear-gradient(180deg, #162235 0%, #101b2d 100%) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 #101b2d;
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.16);
+    }
+
+    #stocksHeaderTable thead .col-market::after,
+    #stocksHeaderTable thead .col-symbol::after {
+      background: rgba(148, 163, 184, 0.16);
     }
 
     #stocksTable tbody tr:nth-child(even) .col-market {
       background: var(--sticky-market-bg) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-market-bg);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     #stocksTable tbody tr:nth-child(even) .col-symbol {
       background: var(--sticky-symbol-bg) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-symbol-bg);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     #stocksTable tbody tr:hover .col-market {
       background: var(--sticky-market-hover) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-market-hover);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     #stocksTable tbody tr:hover .col-symbol {
       background: var(--sticky-symbol-hover) !important;
-      box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.16),
-        12px 0 0 var(--sticky-symbol-hover);
+      box-shadow: inset -1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
     .loading,
@@ -547,7 +551,7 @@
 
         <div class="meta-row">
           <div id="meta">Yükleniyor...</div>
-          <div class="table-note">İpucu: Sol sabit sütunların altından veri görünmemesi için opak katman eklendi.</div>
+          <div class="table-note">İpucu: İlk iki sütun sabit kalır; alttan veri görünmesi ve gereksiz BIST etiketi temizlendi.</div>
         </div>
       </div>
     </div>
@@ -767,12 +771,22 @@
       return s;
     }
 
-    function renderTags(value) {
+    function renderTags(value, row) {
       if (!value) return "";
+
+      const market = String(row?.market || "").trim().toUpperCase();
+
       return String(value)
         .split(";")
         .map(s => s.trim())
         .filter(Boolean)
+        .filter(tag => {
+          const upper = tag.toUpperCase();
+          if (market && upper === market) return false;
+          if (market === "BIST" && (/^B[İI]ST$/iu.test(tag) || /^BORSA\s+ISTANBUL$/iu.test(tag))) return false;
+          if (market === "NASDAQ" && /^NASDAQ$/iu.test(tag)) return false;
+          return true;
+        })
         .map(tag => `<span class="tag">${escapeHtml(tag)}</span>`)
         .join("");
     }
@@ -854,7 +868,7 @@
           <td class="col-market">${escapeHtml(r.market || "")}</td>
           <td class="col-symbol symbol">${escapeHtml(r.symbol || "")}</td>
           <td class="company">${escapeHtml(cleanDisplayName(r))}</td>
-          <td>${renderTags(r.universe_tags)}</td>
+          <td>${renderTags(r.universe_tags, r)}</td>
           <td class="right">${fmtNumber(r.last)}</td>
           <td class="right ${signClass(r.change)}">${fmtNumber(r.change)}</td>
           <td class="right ${signClass(r.change_percent)}">${fmtNumber(r.change_percent)}%</td>
