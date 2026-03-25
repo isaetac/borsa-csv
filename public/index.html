@@ -23,7 +23,7 @@
       --radius: 16px;
       --market-col-width: 92px;
       --symbol-col-width: 118px;
-      --table-max-height: 60vh;
+      --table-max-height: 72vh;
     }
 
     * {
@@ -52,14 +52,8 @@
     }
 
     .top-controls {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 18, 32, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-      padding-bottom: 12px;
+      position: relative;
+      z-index: 10;
       margin-bottom: 12px;
     }
 
@@ -431,6 +425,10 @@
         padding: 10px 8px;
         font-size: 13px;
       }
+
+      .table-wrap {
+        max-height: 68vh;
+      }
     }
 
     @media (max-width: 560px) {
@@ -449,6 +447,10 @@
       .table-note {
         font-size: 13px;
       }
+
+      .table-wrap {
+        max-height: 64vh;
+      }
     }
   </style>
 </head>
@@ -458,7 +460,7 @@
       <div class="header-card">
         <h1>Hisse Tablosu</h1>
         <div class="subline">
-          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • yapışkan başlıklar ve mobil uyumlu kullanım
+          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • tablo içinde sabit başlıklar ve mobil uyumlu kullanım
         </div>
 
         <div class="stats-grid">
@@ -516,7 +518,7 @@
 
         <div class="meta-row">
           <div id="meta">Yükleniyor...</div>
-          <div class="table-note">İpucu: Mobilde tabloyu yana kaydırabilir, dikeyde tablo alanı içinde gezebilirsin.</div>
+          <div class="table-note">İpucu: Başlıklar artık tablonun içinde sabit kalır. Dikey kaydırmayı tablo alanında yap.</div>
         </div>
       </div>
     </div>
@@ -560,8 +562,6 @@
     const refreshSelect = document.getElementById("refreshSelect");
     const reloadBtn = document.getElementById("reloadBtn");
     const meta = document.getElementById("meta");
-    const tableWrap = document.getElementById("tableWrap");
-    const topControls = document.getElementById("topControls");
 
     const statTotal = document.getElementById("statTotal");
     const statBist = document.getElementById("statBist");
@@ -897,19 +897,6 @@
       }
     }
 
-    function syncTableHeight() {
-      const viewportHeight = window.innerHeight;
-      const controlsBottom = topControls.getBoundingClientRect().bottom;
-      const gapBelow = 16;
-      const minHeight = 260;
-      const maxHeight = Math.max(minHeight, viewportHeight - controlsBottom - gapBelow);
-      document.documentElement.style.setProperty("--table-max-height", `${maxHeight}px`);
-    }
-
-    const resizeObserver = new ResizeObserver(() => {
-      syncTableHeight();
-    });
-
     document.querySelectorAll("#stocksTable thead th").forEach(th => {
       th.addEventListener("click", () => {
         const key = th.dataset.key;
@@ -959,11 +946,6 @@
     trendFilter.addEventListener("change", applyFilters);
     refreshSelect.addEventListener("change", setupAutoRefresh);
 
-    window.addEventListener("load", syncTableHeight);
-    window.addEventListener("resize", syncTableHeight);
-    resizeObserver.observe(topControls);
-
-    syncTableHeight();
     loadCsv();
     setupAutoRefresh();
   </script>
