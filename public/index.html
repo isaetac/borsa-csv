@@ -344,78 +344,62 @@
     .col-symbol {
       position: sticky;
       overflow: hidden;
-      isolation: isolate;
-    }
-
-    .col-market::before,
-    .col-symbol::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: -1;
+      background-clip: padding-box;
     }
 
     .col-market {
       left: 0;
+      z-index: 40;
+      background: var(--sticky-market-bg) !important;
       box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.12),
-        10px 0 16px rgba(2, 6, 23, 0.18);
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-market-bg);
     }
 
     .col-symbol {
       left: var(--market-col-width);
+      z-index: 41;
+      background: var(--sticky-symbol-bg) !important;
       box-shadow:
-        1px 0 0 rgba(148, 163, 184, 0.12),
-        10px 0 16px rgba(2, 6, 23, 0.18);
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-symbol-bg);
     }
 
     #stocksHeaderTable thead .col-market,
     #stocksHeaderTable thead .col-symbol {
       z-index: 90;
-      background: linear-gradient(180deg, #162235 0%, #101b2d 100%);
+      background: linear-gradient(180deg, #162235 0%, #101b2d 100%) !important;
+      box-shadow:
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 #101b2d;
     }
 
-    #stocksHeaderTable thead .col-market::before,
-    #stocksHeaderTable thead .col-symbol::before {
-      background: linear-gradient(180deg, #162235 0%, #101b2d 100%);
-    }
-
-    #stocksTable tbody .col-market {
-      z-index: 40;
+    #stocksTable tbody tr:nth-child(even) .col-market {
       background: var(--sticky-market-bg) !important;
+      box-shadow:
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-market-bg);
     }
 
-    #stocksTable tbody .col-market::before {
-      background: var(--sticky-market-bg);
-    }
-
-    #stocksTable tbody .col-symbol {
-      z-index: 41;
+    #stocksTable tbody tr:nth-child(even) .col-symbol {
       background: var(--sticky-symbol-bg) !important;
+      box-shadow:
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-symbol-bg);
     }
 
-    #stocksTable tbody .col-symbol::before {
-      background: var(--sticky-symbol-bg);
-    }
-
-    #stocksTable tbody tr:nth-child(even) .col-market,
-    #stocksTable tbody tr:nth-child(even) .col-market::before {
-      background: var(--sticky-market-bg) !important;
-    }
-
-    #stocksTable tbody tr:nth-child(even) .col-symbol,
-    #stocksTable tbody tr:nth-child(even) .col-symbol::before {
-      background: var(--sticky-symbol-bg) !important;
-    }
-
-    #stocksTable tbody tr:hover .col-market,
-    #stocksTable tbody tr:hover .col-market::before {
+    #stocksTable tbody tr:hover .col-market {
       background: var(--sticky-market-hover) !important;
+      box-shadow:
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-market-hover);
     }
 
-    #stocksTable tbody tr:hover .col-symbol,
-    #stocksTable tbody tr:hover .col-symbol::before {
+    #stocksTable tbody tr:hover .col-symbol {
       background: var(--sticky-symbol-hover) !important;
+      box-shadow:
+        1px 0 0 rgba(148, 163, 184, 0.16),
+        12px 0 0 var(--sticky-symbol-hover);
     }
 
     .loading,
@@ -748,6 +732,21 @@
       return v;
     }
 
+    function cleanDisplayName(row) {
+      let name = String(row.display_name || "").trim();
+
+      if (row.market === "BIST") {
+        name = name
+          .replace(/\s*[-–—]\s*B[İI]ST\s*$/iu, "")
+          .replace(/\s*(?:\(|\[)?B[İI]ST(?:\)|\])?\s*$/iu, "")
+          .replace(/\s*[-–—]\s*Borsa\s+Istanbul\s*$/iu, "")
+          .replace(/\s*\(?Borsa\s+Istanbul\)?\s*$/iu, "")
+          .trim();
+      }
+
+      return name;
+    }
+
     function fmtDateTime(v) {
       if (!v) return "";
       const s = String(v).trim();
@@ -854,7 +853,7 @@
         <tr>
           <td class="col-market">${escapeHtml(r.market || "")}</td>
           <td class="col-symbol symbol">${escapeHtml(r.symbol || "")}</td>
-          <td class="company">${escapeHtml(r.display_name || "")}</td>
+          <td class="company">${escapeHtml(cleanDisplayName(r))}</td>
           <td>${renderTags(r.universe_tags)}</td>
           <td class="right">${fmtNumber(r.last)}</td>
           <td class="right ${signClass(r.change)}">${fmtNumber(r.change)}</td>
@@ -900,7 +899,7 @@
       const trend = trendFilter.value;
 
       filteredRows = allRows.filter(r => {
-        const text = `${r.symbol || ""} ${r.display_name || ""} ${r.universe_tags || ""}`.toLowerCase();
+        const text = `${r.symbol || ""} ${cleanDisplayName(r)} ${r.universe_tags || ""}`.toLowerCase();
         const okSearch = !q || text.includes(q);
         const okMarket =
           !market ||
