@@ -1,13 +1,17 @@
 from datetime import datetime, timezone
 from pathlib import Path
 import time
+from zoneinfo import ZoneInfo
 
 import pandas as pd
 from yahooquery import Ticker
 
 DATA_DIR = Path("data")
 PUBLIC_DIR = Path("public")
+HISTORY_DIR = Path("history")
+
 PUBLIC_DIR.mkdir(exist_ok=True)
+HISTORY_DIR.mkdir(exist_ok=True)
 
 UNIVERSE_CSV = DATA_DIR / "universe.csv"
 EXCLUDED_CSV = DATA_DIR / "excluded_symbols.csv"
@@ -21,6 +25,8 @@ SECOND_PASS_BATCH_SIZE = 80
 
 FIRST_PASS_SLEEP = 2.0
 SECOND_PASS_SLEEP = 2.0
+
+LOCAL_TZ = ZoneInfo("Europe/Istanbul")
 
 
 def chunked(items: list[str], size: int):
@@ -73,7 +79,9 @@ def normalize_row(sym: str, item: dict) -> dict:
 
     if market_time_raw is not None and market_time_raw != "":
         try:
-            market_time = datetime.fromtimestamp(int(market_time_raw), tz=timezone.utc).isoformat()
+            market_time = datetime.fromtimestamp(
+                int(market_time_raw), tz=timezone.utc
+            ).isoformat()
         except Exception:
             market_time = str(market_time_raw)
 
@@ -241,7 +249,9 @@ def build_output(universe: pd.DataFrame, quotes: pd.DataFrame) -> pd.DataFrame:
         {"TR": "Europe/Istanbul", "US": "America/New_York"}
     )
 
-    merged["retrieved_at_utc"] = datetime.now(timezone.utc).isoformat()
+    retrieved_at_utc = datetime.now(timezone.utc)
+    merged["retrieved_at_utc"] = retrieved_at_utc.isoformat()
+    merged["retrieved_at_local"] = retrieved_at_utc.astimezone(LOCAL_TZ).isoformat()
 
     final_cols = [
         "market",
@@ -265,11 +275,69 @@ def build_output(universe: pd.DataFrame, quotes: pd.DataFrame) -> pd.DataFrame:
         "market_state",
         "market_time",
         "retrieved_at_utc",
+        "retrieved_at_local",
     ]
 
     final = merged[final_cols].copy()
     final = final.sort_values(["market", "symbol"]).reset_index(drop=True)
     return final
+
+
+def save_history_snapshot(final: pd.DataFrame) -> Path:
+    snapshot = final[final["last"].notna()].copy()
+
+    if snapshot.empty:
+        raise RuntimeError("History için kaydedilecek dolu fiyat satırı yok.")
+
+    snapshot["history_date_local"] = pd.to_datetime(
+        snapshot["retrieved_at_local"], errors="coerce"
+    ).dt.strftime("%Y-%m-%d")
+
+    history_date = snapshot["history_date_local"].dropna().iloc[0]
+    history_path = HISTORY_DIR / f"{history_date}.csv"
+
+    history_cols = [
+        "retrieved_at_utc",
+        "retrieved_at_local",
+        "market",
+        "symbol",
+        "quote_symbol",
+        "display_name",
+        "country",
+        "universe_tags",
+        "last",
+        "change",
+        "change_percent",
+        "volume",
+        "open",
+        "high",
+        "low",
+        "prev_close",
+        "currency",
+        "exchange_name",
+        "exchange_code",
+        "exchange_tz",
+        "market_state",
+        "market_time",
+    ]
+
+    snapshot = snapshot[history_cols].copy()
+
+    if history_path.exists():
+        old = pd.read_csv(history_path)
+        combined = pd.concat([old, snapshot], ignore_index=True)
+        combined = combined.drop_duplicates(
+            subset=["retrieved_at_utc", "quote_symbol"], keep="last"
+        )
+    else:
+        combined = snapshot
+
+    combined = combined.sort_values(
+        ["retrieved_at_utc", "market", "symbol"]
+    ).reset_index(drop=True)
+
+    combined.to_csv(history_path, index=False, encoding="utf-8-sig")
+    return history_path
 
 
 def main() -> None:
@@ -318,6 +386,8 @@ def main() -> None:
     final = build_output(universe, quotes)
     final.to_csv(LATEST_CSV, index=False, encoding="utf-8-sig")
 
+    history_path = save_history_snapshot(final)
+
     missing = final[final["last"].isna()][
         ["market", "symbol", "quote_symbol", "display_name", "universe_tags"]
     ].copy()
@@ -326,6 +396,7 @@ def main() -> None:
 
     filled = final["last"].notna().sum()
     print(f"\nKaydedildi: {LATEST_CSV}")
+    print(f"History: {history_path}")
     print(f"Eksikler: {MISSING_CSV}")
     print(f"Aday hariç tutulacaklar: {CANDIDATE_EXCLUSIONS_CSV}")
     print(f"Toplam satır: {len(final)}")
