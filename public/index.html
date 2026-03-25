@@ -50,6 +50,7 @@
       width: min(1600px, calc(100% - 24px));
       margin: 0 auto;
       padding: 14px 0 24px;
+      overflow: visible;
     }
 
     .top-controls {
@@ -221,13 +222,15 @@
 
     .table-wrap {
       width: 100%;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: visible;
       -webkit-overflow-scrolling: touch;
       overscroll-behavior-x: contain;
       background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(11, 19, 36, 0.98));
       border: 1px solid var(--border);
       border-radius: var(--radius);
       box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+      position: relative;
     }
 
     #stocksTable {
@@ -235,6 +238,7 @@
       min-width: 1540px;
       border-collapse: separate;
       border-spacing: 0;
+      position: relative;
     }
 
     #stocksTable th,
@@ -245,10 +249,15 @@
       white-space: nowrap;
     }
 
+    #stocksTable thead {
+      position: relative;
+      z-index: 30;
+    }
+
     #stocksTable thead th {
       position: sticky;
       top: var(--sticky-offset);
-      z-index: 20;
+      z-index: 40;
       background: linear-gradient(180deg, #162235 0%, #101b2d 100%);
       color: var(--text);
       font-size: 13px;
@@ -360,7 +369,7 @@
       left: 0;
       width: var(--market-col-width);
       min-width: var(--market-col-width);
-      z-index: 31;
+      z-index: 45;
       box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
@@ -377,7 +386,7 @@
       left: var(--market-col-width);
       width: var(--symbol-col-width);
       min-width: var(--symbol-col-width);
-      z-index: 31;
+      z-index: 45;
       box-shadow: 1px 0 0 rgba(148, 163, 184, 0.12);
     }
 
