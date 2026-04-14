@@ -85,9 +85,34 @@
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(0, 1fr));
       gap: 12px;
       margin-bottom: 12px;
+    }
+
+    .info-banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: flex-start;
+      background: rgba(17, 24, 39, 0.85);
+      border: 1px solid rgba(245, 158, 11, 0.28);
+      border-radius: 12px;
+      padding: 11px 14px;
+      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+
+    .info-banner strong {
+      color: var(--amber);
+      font-weight: 600;
+    }
+
+    .info-banner .dot {
+      color: var(--border);
+      margin: 0 4px;
     }
 
     .stat-card {
@@ -365,7 +390,7 @@
       h1 { font-size: 24px; }
 
       .stats-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 10px;
       }
 
@@ -398,7 +423,7 @@
       <div class="header-card">
         <h1>Hisse Tablosu</h1>
         <div class="subline">
-          BIST, NASDAQ ve SP500 hisseleri • canlı CSV görünümü • ilk iki sütun sabit ve sade hizalı görünüm
+          BIST, NASDAQ, SP500 ve TEFAS yatırım fonları • canlı CSV görünümü • ilk iki sütun sabit
         </div>
 
         <div class="stats-grid">
@@ -418,6 +443,10 @@
             <div class="stat-label">SP500</div>
             <div class="stat-value" id="statSp500">0</div>
           </div>
+          <div class="stat-card">
+            <div class="stat-label">TEFAS</div>
+            <div class="stat-value" id="statTefas">0</div>
+          </div>
         </div>
 
         <div class="toolbar">
@@ -428,6 +457,7 @@
             <option value="BIST">BIST</option>
             <option value="NASDAQ">NASDAQ</option>
             <option value="SP500">SP500</option>
+            <option value="TEFAS">TEFAS</option>
           </select>
 
           <select id="trendFilter" aria-label="Trend filtresi">
@@ -441,7 +471,7 @@
             <option value="0">Otomatik yenileme kapalı</option>
             <option value="30">30 sn</option>
             <option value="60">60 sn</option>
-            <option value="300">5 dk</option>
+            <option value="300" selected>5 dk</option>
           </select>
 
           <button id="reloadBtn" type="button">Yenile</button>
@@ -454,9 +484,15 @@
           <button id="topVolumeBtn" class="quick-btn" type="button">En Hacimli 20</button>
         </div>
 
+        <div class="info-banner">
+          <span>⚠ <strong>Fiyatlar gecikmeli olabilir.</strong> BIST, NASDAQ ve SP500 verileri otomatik güncellenir.</span>
+          <span class="dot">|</span>
+          <span>🗂 <strong>TEFAS fonları</strong> gerçek zamanlı değildir — sunucu TEFAS API'sine erişemediğinden fiyatlar en son lokal çalıştırmadan alınmıştır ve güncel olmayabilir.</span>
+        </div>
+
         <div class="meta-row">
           <div id="meta">Yükleniyor...</div>
-          <div class="table-note">İlk iki sütun sabit. Etiket sütunu kaldırıldı ve kolon hizaları sadeleştirildi.</div>
+          <div class="table-note">İlk iki sütun sabit.</div>
         </div>
       </div>
     </div>
@@ -572,6 +608,7 @@
     const statBist = document.getElementById('statBist');
     const statNasdaq = document.getElementById('statNasdaq');
     const statSp500 = document.getElementById('statSp500');
+    const statTefas = document.getElementById('statTefas');
 
     const showAllBtn = document.getElementById('showAllBtn');
     const topGainersBtn = document.getElementById('topGainersBtn');
@@ -789,6 +826,7 @@
       statBist.textContent = rows.filter(r => r.market === 'BIST').length.toLocaleString('tr-TR');
       statNasdaq.textContent = rows.filter(r => r.market === 'NASDAQ').length.toLocaleString('tr-TR');
       statSp500.textContent = rows.filter(r => String(r.universe_tags || '').includes('SP500')).length.toLocaleString('tr-TR');
+      statTefas.textContent = rows.filter(r => r.market === 'TEFAS').length.toLocaleString('tr-TR');
     }
 
     function updateMeta() {
