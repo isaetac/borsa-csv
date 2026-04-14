@@ -24,11 +24,8 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build universe if missing
-        run: |
-          if [ ! -f data/universe.csv ]; then
-            python build_universe.py
-          fi
+      - name: Build universe
+        run: python build_universe.py
 
       - name: Update quotes
         run: python build_quotes.py
