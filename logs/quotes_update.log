@@ -1,0 +1,42 @@
+1. geçiþ (quotes) | sembol=4126 | batch=3
+[quotes 1/3] batch=1400 | veri=1380
+[quotes 2/3] batch=1400 | veri=1400
+[quotes 3/3] batch=1326 | veri=1326
+Ýlk geçiþ sonrasý eksik sembol: 20
+2. geçiþ (price fallback) | sembol=20 | batch=1
+[price 1/1] batch=20 | veri=1
+
+Kaydedildi: public\latest.csv
+Eksikler: public\missing_symbols.csv
+Aday hariç tutulacaklar: public\candidate_exclusions.csv
+Toplam satýr: 4126
+Fiyat dolu satýr: 4107
+Boþ satýr: 19
+1. geçiþ (quotes) | sembol=4126 | batch=3
+[quotes 1/3] batch=1400 | veri=1380
+[quotes 2/3] batch=1400 | veri=1400
+[quotes 3/3] batch=1326 | veri=1326
+Ýlk geçiþ sonrasý eksik sembol: 20
+2. geçiþ (price fallback) | sembol=20 | batch=1
+[price 1/1] batch=20 | veri=1
+
+Kaydedildi: public\latest.csv
+Eksikler: public\missing_symbols.csv
+Aday hariç tutulacaklar: public\candidate_exclusions.csv
+Toplam satýr: 4126
+Fiyat dolu satýr: 4107
+Boþ satýr: 19
+1. geçiþ (quotes) | sembol=4126 | batch=3
+[quotes 1/3] batch=1400 | veri=1380
+[quotes 2/3] batch=1400 | veri=1400
+[quotes 3/3] batch=1326 | veri=1326
+Ýlk geçiþ sonrasý eksik sembol: 20
+2. geçiþ (price fallback) | sembol=20 | batch=1
+[price 1/1] batch=20 | veri=1
+
+Kaydedildi: public\latest.csv
+Eksikler: public\missing_symbols.csv
+Aday hariç tutulacaklar: public\candidate_exclusions.csv
+Toplam satýr: 4126
+Fiyat dolu satýr: 4107
+Boþ satýr: 19

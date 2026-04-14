@@ -25,6 +25,7 @@ SECOND_PASS_SLEEP = 2.0
 
 TEFAS_HISTORY_URL = "https://www.tefas.gov.tr/api/DB/BindHistoryInfo"
 TEFAS_REFERER = "https://www.tefas.gov.tr/TarihselVeriler.aspx"
+TEFAS_CACHE_CSV = DATA_DIR / "tefas_cache.csv"
 
 
 def chunked(items: list[str], size: int):
@@ -210,8 +211,8 @@ def fetch_tefas_quotes(fund_codes: list[str]) -> pd.DataFrame:
             print(f"TEFAS history {fontip} hatası: {e}")
 
     if not all_rows:
-        print("TEFAS'tan hiç geçmiş veri alınamadı.")
-        return pd.DataFrame()
+        print("TEFAS'tan hiç geçmiş veri alınamadı, cache kontrol ediliyor...")
+        return _load_tefas_cache(fund_codes)
 
     df = pd.DataFrame(all_rows)
     df.columns = [str(c).strip().upper() for c in df.columns]
@@ -264,8 +265,35 @@ def fetch_tefas_quotes(fund_codes: list[str]) -> pd.DataFrame:
             }
         )
 
+    result = pd.DataFrame(result_rows)
     print(f"TEFAS: {len(result_rows)} fon fiyatı alındı.")
-    return pd.DataFrame(result_rows)
+    _save_tefas_cache(result)
+    return result
+
+
+def _save_tefas_cache(df: pd.DataFrame) -> None:
+    if df.empty:
+        return
+    try:
+        df.to_csv(TEFAS_CACHE_CSV, index=False, encoding="utf-8-sig")
+        print(f"TEFAS cache güncellendi: {TEFAS_CACHE_CSV}")
+    except Exception as e:
+        print(f"TEFAS cache yazılamadı: {e}")
+
+
+def _load_tefas_cache(fund_codes: list[str]) -> pd.DataFrame:
+    if not TEFAS_CACHE_CSV.exists():
+        print("TEFAS cache bulunamadı.")
+        return pd.DataFrame()
+    try:
+        df = pd.read_csv(TEFAS_CACHE_CSV)
+        fund_set = set(fund_codes)
+        df = df[df["quote_symbol"].astype(str).isin(fund_set)].copy()
+        print(f"TEFAS cache kullanılıyor: {len(df)} fon (cache: {TEFAS_CACHE_CSV})")
+        return df
+    except Exception as e:
+        print(f"TEFAS cache okunamadı: {e}")
+        return pd.DataFrame()
 
 
 def load_excluded_symbols() -> set[str]:

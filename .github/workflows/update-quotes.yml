@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Build universe
-        run: python build_universe.py
-
       - name: Update quotes
         run: python build_quotes.py
 
@@ -35,7 +32,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/latest.csv public/missing_symbols.csv public/candidate_exclusions.csv || true
-          git add data/universe.csv data/excluded_symbols.csv || true
+          git add data/universe.csv data/excluded_symbols.csv data/tefas_cache.csv || true
           git diff --cached --quiet || git commit -m "Auto update market data"
           git push
 
