@@ -1,8 +1,9 @@
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import time
 
 import pandas as pd
+import requests
 from yahooquery import Ticker
 
 DATA_DIR = Path("data")
@@ -21,6 +22,9 @@ SECOND_PASS_BATCH_SIZE = 80
 
 FIRST_PASS_SLEEP = 2.0
 SECOND_PASS_SLEEP = 2.0
+
+TEFAS_HISTORY_URL = "https://www.tefas.gov.tr/api/DB/BindHistoryInfo"
+TEFAS_REFERER = "https://www.tefas.gov.tr/TarihselVeriler.aspx"
 
 
 def chunked(items: list[str], size: int):
@@ -146,6 +150,124 @@ def fetch_batch_price(symbols: list[str]) -> list[dict]:
     return rows
 
 
+def _make_tefas_session() -> requests.Session:
+    """TEFAS API için geçerli session cookie'si olan oturum oluşturur."""
+    s = requests.Session()
+    s.headers.update(
+        {
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) "
+                "Chrome/120.0.0.0 Safari/537.36"
+            ),
+            "Accept-Language": "tr-TR,tr;q=0.9,en;q=0.8",
+        }
+    )
+    s.get(TEFAS_REFERER, timeout=30)
+    return s
+
+
+def fetch_tefas_quotes(fund_codes: list[str]) -> pd.DataFrame:
+    """TEFAS API'den son işlem gününün NAV fiyatlarını çeker.
+
+    Son 7 gün içindeki veriyi alıp fon başına en yeni iki günü kullanarak
+    günlük değişimi hesaplar (hafta sonu / tatil günlerini otomatik atlar).
+    TARIH alanı ms cinsinden Unix timestamp olarak gelir.
+    """
+    if not fund_codes:
+        return pd.DataFrame()
+
+    today = datetime.now(timezone.utc).date()
+    from_date = today - timedelta(days=7)
+
+    s = _make_tefas_session()
+    api_headers = {
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+        "X-Requested-With": "XMLHttpRequest",
+        "Referer": TEFAS_REFERER,
+        "Origin": "https://www.tefas.gov.tr",
+    }
+
+    all_rows: list[dict] = []
+    for fontip in ("YAT", "BYF"):
+        try:
+            resp = s.post(
+                TEFAS_HISTORY_URL,
+                data={
+                    "fontip": fontip,
+                    "sfonkod": "",
+                    "bastarih": from_date.strftime("%d.%m.%Y"),
+                    "bittarih": today.strftime("%d.%m.%Y"),
+                },
+                headers=api_headers,
+                timeout=60,
+            )
+            resp.raise_for_status()
+            payload = resp.json()
+            all_rows.extend(payload.get("data", []))
+        except Exception as e:
+            print(f"TEFAS history {fontip} hatası: {e}")
+
+    if not all_rows:
+        print("TEFAS'tan hiç geçmiş veri alınamadı.")
+        return pd.DataFrame()
+
+    df = pd.DataFrame(all_rows)
+    df.columns = [str(c).strip().upper() for c in df.columns]
+
+    if "FIYAT" not in df.columns or "FONKODU" not in df.columns or "TARIH" not in df.columns:
+        print(f"TEFAS history: beklenen kolonlar eksik ({list(df.columns)})")
+        return pd.DataFrame()
+
+    # TARIH: ms cinsinden Unix timestamp string'i
+    df["TARIH"] = pd.to_datetime(
+        df["TARIH"].astype(str).str.strip().astype("int64"), unit="ms", utc=True
+    )
+    df["FIYAT"] = pd.to_numeric(df["FIYAT"], errors="coerce")
+    df = df.dropna(subset=["TARIH", "FIYAT"]).copy()
+    df = df.sort_values(["FONKODU", "TARIH"])
+
+    fund_set = set(fund_codes)
+    result_rows = []
+    for kod, group in df.groupby("FONKODU"):
+        if kod not in fund_set:
+            continue
+
+        last_row = group.iloc[-1]
+        last = float(last_row["FIYAT"])
+        prev_close = float(group.iloc[-2]["FIYAT"]) if len(group) >= 2 else None
+
+        change = None
+        change_pct = None
+        if prev_close is not None and prev_close != 0:
+            change = last - prev_close
+            change_pct = (change / prev_close) * 100
+
+        result_rows.append(
+            {
+                "quote_symbol": str(kod),
+                "display_name_quote": None,
+                "last": last,
+                "change": change,
+                "change_percent": change_pct,
+                "volume": None,
+                "open": None,
+                "high": None,
+                "low": None,
+                "prev_close": prev_close,
+                "currency": "TRY",
+                "exchange_name": "TEFAS",
+                "exchange_code": "TEFAS",
+                "market_state": "CLOSED",
+                "market_time": last_row["TARIH"].isoformat(),
+            }
+        )
+
+    print(f"TEFAS: {len(result_rows)} fon fiyatı alındı.")
+    return pd.DataFrame(result_rows)
+
+
 def load_excluded_symbols() -> set[str]:
     if not EXCLUDED_CSV.exists():
         return set()
@@ -208,12 +330,18 @@ def build_output(universe: pd.DataFrame, quotes: pd.DataFrame) -> pd.DataFrame:
 
     merged["display_name"] = merged["display_name_quote"].fillna(merged["name"])
 
-    merged["market"] = merged.apply(
-        lambda r: "BIST"
-        if bool(r["is_bist"])
-        else ("NASDAQ" if bool(r["is_nasdaq"]) else ("SP500" if bool(r["is_sp500"]) else r["country"])),
-        axis=1,
-    )
+    def _market(r) -> str:
+        if bool(r.get("is_tefas")):
+            return "TEFAS"
+        if bool(r["is_bist"]):
+            return "BIST"
+        if bool(r["is_nasdaq"]):
+            return "NASDAQ"
+        if bool(r["is_sp500"]):
+            return "SP500"
+        return r["country"]
+
+    merged["market"] = merged.apply(_market, axis=1)
 
     merged["currency"] = merged["currency"].fillna(
         merged["country"].map({"TR": "TRY", "US": "USD"})
@@ -225,6 +353,7 @@ def build_output(universe: pd.DataFrame, quotes: pd.DataFrame) -> pd.DataFrame:
                 "BIST": "Borsa Istanbul",
                 "NASDAQ": "NASDAQ",
                 "SP500": "US Market",
+                "TEFAS": "TEFAS",
             }
         )
     )
@@ -235,6 +364,7 @@ def build_output(universe: pd.DataFrame, quotes: pd.DataFrame) -> pd.DataFrame:
                 "BIST": "XIST",
                 "NASDAQ": "XNAS",
                 "SP500": "US",
+                "TEFAS": "TEFAS",
             }
         )
     )
@@ -286,8 +416,23 @@ def main() -> None:
         universe = universe[~universe["quote_symbol"].astype(str).isin(excluded)].copy()
         print(f"excluded_symbols.csv uygulandı | çıkarılan={before - len(universe)}")
 
+    is_tefas_col = universe.get("is_tefas", pd.Series(False, index=universe.index))
+    tefas_mask = is_tefas_col.astype(bool)
+
+    tefas_universe = universe[tefas_mask].copy()
+    yf_universe = universe[~tefas_mask].copy()
+
+    tefas_symbols = (
+        tefas_universe["quote_symbol"]
+        .dropna()
+        .astype(str)
+        .str.strip()
+        .unique()
+        .tolist()
+    )
+
     symbols = (
-        universe["quote_symbol"]
+        yf_universe["quote_symbol"]
         .dropna()
         .astype(str)
         .str.strip()
@@ -317,7 +462,13 @@ def main() -> None:
     else:
         quotes = quotes_1.copy()
 
-    final = build_output(universe, quotes)
+    print(f"\nTEFAS fon fiyatları alınıyor ({len(tefas_symbols)} fon)...")
+    tefas_quotes = fetch_tefas_quotes(tefas_symbols)
+
+    all_quotes = pd.concat([quotes, tefas_quotes], ignore_index=True) if not tefas_quotes.empty else quotes
+    all_quotes = all_quotes.drop_duplicates(subset=["quote_symbol"], keep="last")
+
+    final = build_output(universe, all_quotes)
     final.to_csv(LATEST_CSV, index=False, encoding="utf-8-sig")
 
     missing = final[final["last"].isna()][
