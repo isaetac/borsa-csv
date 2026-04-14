@@ -254,7 +254,8 @@ def fetch_tefas() -> pd.DataFrame:
         print(f"TEFAS {fontip}: {df['FONKODU'].nunique()} benzersiz fon")
 
     if not frames:
-        raise RuntimeError("TEFAS'tan hiç fon verisi alınamadı.")
+        print("UYARI: TEFAS'tan hiç fon verisi alınamadı, TEFAS atlanıyor.")
+        return pd.DataFrame(columns=["symbol", "quote_symbol", "name", "country", "is_bist", "is_nasdaq", "is_sp500", "is_tefas"])
 
     combined = pd.concat(frames, ignore_index=True).drop_duplicates(subset=["FONKODU"])
 
