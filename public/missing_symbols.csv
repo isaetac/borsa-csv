@@ -1,3 +1,969 @@
 ﻿market,symbol,quote_symbol,display_name,universe_tags
 BIST,SNKRN,SNKRN.IS,SENKRON SİBER GÜVENLİK YAZILIM VE BİLİŞİM ÇÖZÜMLERİ A.Ş.,BIST
 BIST,YGYO,YGYO.IS,YEŞİL GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.,BIST
+NASDAQ,NRIX,NRIX,"Nurix Therapeutics, Inc. - Common stock",NASDAQ
+NASDAQ,NRSN,NRSN,NeuroSense Therapeutics Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,NRXP,NRXP,"NRX Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,NSIT,NSIT,"Insight Enterprises, Inc. - Common Stock",NASDAQ
+NASDAQ,NSPR,NSPR,InspireMD Inc. - Common Stock,NASDAQ
+NASDAQ,NSSC,NSSC,"NAPCO Security Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,NSTS,NSTS,"NSTS Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,NSYS,NSYS,Nortech Systems Incorporated - Common Stock,NASDAQ
+NASDAQ,NTAP,NTAP,"NetApp, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,NTCL,NTCL,NETCLASS TECHNOLOGY INC - Class A Ordinary Shares,NASDAQ
+NASDAQ,NTCT,NTCT,"NetScout Systems, Inc. - Common Stock",NASDAQ
+NASDAQ,NTES,NTES,"NetEase, Inc. - American Depositary Shares, each representing 5 ordinary shares",NASDAQ
+NASDAQ,NTGR,NTGR,"NETGEAR, Inc. - Common Stock",NASDAQ
+NASDAQ,NTHI,NTHI,"NeOnc Technologies Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,NTIC,NTIC,Northern Technologies International Corporation - Common Stock,NASDAQ
+NASDAQ,NTLA,NTLA,"Intellia Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,NTNX,NTNX,"Nutanix, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,NTRA,NTRA,"Natera, Inc. - Common Stock",NASDAQ
+NASDAQ,NTRB,NTRB,Nutriband Inc. - Common Stock,NASDAQ
+NASDAQ,NTRP,NTRP,"NextTrip, Inc. - Common Stock",NASDAQ
+NASDAQ,NTSK,NTSK,"Netskope, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,NTWK,NTWK,NETSOL Technologies Inc. - Common Stock,NASDAQ
+NASDAQ,NTWO,NTWO,Newbury Street II Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,NUAI,NUAI,"New Era Energy & Digital, Inc. - Common Stock",NASDAQ
+NASDAQ,NUCL,NUCL,Eagle Nuclear Energy Corp. - Common stock,NASDAQ
+NASDAQ,NUTR,NUTR,Nusatrip Incorporated - Common Stock,NASDAQ
+NASDAQ,NUTX,NUTX,Nutex Health Inc. - Common Stock,NASDAQ
+NASDAQ,NUVL,NUVL,"Nuvalent, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,NUWE,NUWE,"Nuwellis, Inc. - Common Stock",NASDAQ
+NASDAQ,NVA,NVA,Nova Minerals Limited - American Depositary Shares,NASDAQ
+NASDAQ,NVAX,NVAX,"Novavax, Inc. - Common Stock",NASDAQ
+NASDAQ,NVCR,NVCR,NovoCure Limited - Ordinary Shares,NASDAQ
+NASDAQ,NVCT,NVCT,"Nuvectis Pharma, Inc. - Common Stock",NASDAQ
+NASDAQ,NVDA,NVDA,NVIDIA Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,NVEC,NVEC,NVE Corporation - Common Stock,NASDAQ
+NASDAQ,NVMI,NVMI,Nova Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,NVNI,NVNI,Nvni Group Limited - Ordinary Shares,NASDAQ
+NASDAQ,NVNO,NVNO,enVVeno Medical Corporation - Common Stock,NASDAQ
+NASDAQ,NVTS,NVTS,Navitas Semiconductor Corporation - Common Stock,NASDAQ
+NASDAQ,NVVE,NVVE,Nuvve Holding Corp. - Common Stock,NASDAQ
+NASDAQ,NWBI,NWBI,"Northwest Bancshares, Inc. - Common Stock",NASDAQ
+NASDAQ,NWE,NWE,"NorthWestern Energy Group, Inc. - Common Stock",NASDAQ
+NASDAQ,NWFL,NWFL,Norwood Financial Corp. - Common Stock,NASDAQ
+NASDAQ,NWGL,NWGL,CL Workshop Group Limited - American Depositary Shares,NASDAQ
+NASDAQ,NWL,NWL,Newell Brands Inc. - Common Stock,NASDAQ
+NASDAQ,NWPX,NWPX,"NWPX Infrastructure, Inc. - Common Stock",NASDAQ
+NASDAQ,NWS,NWS,News Corporation - Class B Common Stock,NASDAQ;SP500
+NASDAQ,NWSA,NWSA,News Corporation - Class A Common Stock,NASDAQ;SP500
+NASDAQ,NWTG,NWTG,"Newton Golf Company, Inc. - Common Stock",NASDAQ
+NASDAQ,NXGL,NXGL,"NexGel, Inc - Common Stock",NASDAQ
+NASDAQ,NXL,NXL,"Nexalin Technology, Inc. - Common Stock",NASDAQ
+NASDAQ,NXPI,NXPI,NXP Semiconductors N.V. - Common Stock,NASDAQ;SP500
+NASDAQ,NXPL,NXPL,NextPlat Corp - Common Stock,NASDAQ
+NASDAQ,NXST,NXST,"Nexstar Media Group, Inc. - Common Stock",NASDAQ
+NASDAQ,NXT,NXT,Nextpower Inc. - Class A Common Stock,NASDAQ
+NASDAQ,NXTC,NXTC,"NextCure, Inc. - Common Stock",NASDAQ
+NASDAQ,NXTS,NXTS,Nexentis Technologies Inc. - Common Stock,NASDAQ
+NASDAQ,NXTT,NXTT,Next Technology Holding Inc. - Ordinary Shares,NASDAQ
+NASDAQ,NXXT,NXXT,"NextNRG, Inc. - Common Stock",NASDAQ
+NASDAQ,NYAX,NYAX,Nayax Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,NYXH,NYXH,Nyxoah SA - Ordinary Shares,NASDAQ
+NASDAQ,OABI,OABI,"OmniAb, Inc. - Common Stock",NASDAQ
+NASDAQ,OACC,OACC,Oaktree Acquisition Corp. III Life Sciences - Class A Ordinary Share,NASDAQ
+NASDAQ,OBA,OBA,Oxley Bridge Acquisition Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,OBIO,OBIO,"Orchestra BioMed Holdings, Inc. - Ordinary Shares",NASDAQ
+NASDAQ,OBT,OBT,"Orange County Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,OCC,OCC,Optical Cable Corporation - Common Stock,NASDAQ
+NASDAQ,OCFC,OCFC,OceanFirst Financial Corp. - Common Stock,NASDAQ
+NASDAQ,OCG,OCG,Oriental Culture Holding LTD - Ordinary Shares,NASDAQ
+NASDAQ,OCGN,OCGN,"Ocugen, Inc. - Common Stock",NASDAQ
+NASDAQ,OCS,OCS,Oculis Holding AG - Ordinary shares,NASDAQ
+NASDAQ,OCUL,OCUL,"Ocular Therapeutix, Inc. - Common Stock",NASDAQ
+NASDAQ,OXBR,OXBR,Oxbridge Re Holdings Limited - Ordinary Shares,NASDAQ
+NASDAQ,OYSE,OYSE,Oyster Enterprises II Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,OZK,OZK,Bank OZK - Common Stock,NASDAQ
+NASDAQ,PAAC,PAAC,Proem Acquisition Corp I - Ordinary Shares,NASDAQ
+NASDAQ,PACB,PACB,"Pacific Biosciences of California, Inc. - Common Stock",NASDAQ
+NASDAQ,PACH,PACH,Pioneer Acquisition I Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,PAHC,PAHC,Phibro Animal Health Corporation - Class A Common Stock,NASDAQ
+NASDAQ,PALI,PALI,"Palisade Bio, Inc. - Common Stock",NASDAQ
+NASDAQ,PALO,PALO,Paloma Acquisition Corp I - Class A Ordinary Shares,NASDAQ
+NASDAQ,PAMT,PAMT,PAMT CORP - Common Stock,NASDAQ
+NASDAQ,PANL,PANL,Pangaea Logistics Solutions Ltd. - Common Stock,NASDAQ
+NASDAQ,PANW,PANW,"Palo Alto Networks, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,PARK,PARK,"Park Dental Partners, Inc. - Common Stock",NASDAQ
+NASDAQ,PASG,PASG,"Passage Bio, Inc. - Common Stock",NASDAQ
+NASDAQ,PASW,PASW,"Ping An Biomedical Co., Ltd. - Ordinary Shares",NASDAQ
+NASDAQ,PATK,PATK,"Patrick Industries, Inc. - Common Stock",NASDAQ
+NASDAQ,PAVM,PAVM,PAVmed Inc. - Common Stock,NASDAQ
+NASDAQ,PAVS,PAVS,Paranovus Entertainment Technology Ltd. - Class A Ordinary Shares,NASDAQ
+NASDAQ,PAX,PAX,Patria Investments Limited - Class A Common Shares,NASDAQ
+NASDAQ,PAYO,PAYO,Payoneer Global Inc. - Common Stock,NASDAQ
+NASDAQ,PAYS,PAYS,"Paysign, Inc. - Common Stock",NASDAQ
+NASDAQ,PAYX,PAYX,"Paychex, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,PBFS,PBFS,"Pioneer Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,PBHC,PBHC,"Pathfinder Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,PBM,PBM,Psyence Biomedical Ltd. - Common Shares,NASDAQ
+NASDAQ,PBYI,PBYI,Puma Biotechnology Inc - Common Stock,NASDAQ
+NASDAQ,PC,PC,Premium Catering (Holdings) Limited - Ordinary Shares,NASDAQ
+NASDAQ,PCAP,PCAP,ProCap Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,PCAR,PCAR,PACCAR Inc. - Common Stock,NASDAQ;SP500
+NASDAQ,PCB,PCB,PCB Bancorp - Common Stock,NASDAQ
+NASDAQ,PCLA,PCLA,PicoCELA Inc. - American Depositary Shares,NASDAQ
+NASDAQ,PCRX,PCRX,"Pacira BioSciences, Inc. - Common Stock",NASDAQ
+NASDAQ,PCSA,PCSA,"Processa Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,PCSC,PCSC,Perceptive Capital Solutions Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,PCT,PCT,"PureCycle Technologies, Inc. - Common stock",NASDAQ
+NASDAQ,PCTY,PCTY,Paylocity Holding Corporation - Common Stock,NASDAQ
+NASDAQ,PCVX,PCVX,"Vaxcyte, Inc. - Common Stock",NASDAQ
+NASDAQ,PCYO,PCYO,Pure Cycle Corporation - Common Stock,NASDAQ
+NASDAQ,PDEX,PDEX,"Pro-Dex, Inc. - Common Stock",NASDAQ
+NASDAQ,PDFS,PDFS,"PDF Solutions, Inc. - Common Stock",NASDAQ
+NASDAQ,PDLB,PDLB,"Ponce Financial Group, Inc. - Common Stock",NASDAQ
+NASDAQ,PDSB,PDSB,PDS Biotechnology Corporation - Common Stock,NASDAQ
+NASDAQ,PDYN,PDYN,Palladyne AI Corp. - Common stock,NASDAQ
+NASDAQ,PEBK,PEBK,"Peoples Bancorp of North Carolina, Inc. - Common Stock",NASDAQ
+NASDAQ,PEBO,PEBO,Peoples Bancorp Inc. - Common Stock,NASDAQ
+NASDAQ,PECO,PECO,"Phillips Edison & Company, Inc. - Common Stock",NASDAQ
+NASDAQ,PEGA,PEGA,Pegasystems Inc. - Common Stock,NASDAQ
+NASDAQ,PENG,PENG,"Penguin Solutions, Inc. - Common Stock",NASDAQ
+NASDAQ,PENN,PENN,"PENN Entertainment, Inc. - Common Stock",NASDAQ
+NASDAQ,PEP,PEP,"PepsiCo, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,PEPG,PEPG,PepGen Inc. - Common Stock,NASDAQ
+NASDAQ,PERI,PERI,Perion Network Ltd - Ordinary Shares,NASDAQ
+NASDAQ,PESI,PESI,"Perma-Fix Environmental Services, Inc. - Common Stock",NASDAQ
+NASDAQ,PETS,PETS,"PetMed Express, Inc. - Common Stock",NASDAQ
+NASDAQ,PETZ,PETZ,"TDH Holdings, Inc. - Common Shares",NASDAQ
+NASDAQ,PFAI,PFAI,Pinnacle Food Group Limited - Class A Common Shares,NASDAQ
+NASDAQ,PFG,PFG,Principal Financial Group Inc - Common Stock,NASDAQ;SP500
+NASDAQ,PFIS,PFIS,Peoples Financial Services Corp. - Common Stock,NASDAQ
+NASDAQ,PFSA,PFSA,"Profusa, Inc. - Common Stock",NASDAQ
+NASDAQ,PFX,PFX,PhenixFIN Corporation - Common Stock,NASDAQ
+NASDAQ,PGAC,PGAC,Pantages Capital Acquisition Corporation - Class A Ordinary Shares,NASDAQ
+NASDAQ,PGC,PGC,Peapack-Gladstone Financial Corporation - Common Stock,NASDAQ
+NASDAQ,PGEN,PGEN,"Precigen, Inc. - Common Stock",NASDAQ
+NASDAQ,PGNY,PGNY,"Progyny, Inc. - Common Stock",NASDAQ
+NASDAQ,PGY,PGY,Pagaya Technologies Ltd. - Class A Ordinary Shares,NASDAQ
+NASDAQ,PHAR,PHAR,"Pharming Group N.V. - ADS, each representing 10 ordinary shares",NASDAQ
+NASDAQ,PHAT,PHAT,"Phathom Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,PHIO,PHIO,Phio Pharmaceuticals Corp. - Common Stock,NASDAQ
+NASDAQ,PHOE,PHOE,Phoenix Asia Holdings Limited - Ordinary Shares,NASDAQ
+NASDAQ,PHUN,PHUN,"Phunware, Inc. - Common Stock",NASDAQ
+NASDAQ,PHVS,PHVS,Pharvaris N.V. - Ordinary Shares,NASDAQ
+NASDAQ,PI,PI,"Impinj, Inc. - Common Stock",NASDAQ
+NASDAQ,PICS,PICS,PicS N.V. - Class A Common Shares,NASDAQ
+NASDAQ,PIII,PIII,P3 Health Partners Inc. - Class A Common Stock,NASDAQ
+NASDAQ,PKBK,PKBK,"Parke Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,PKOH,PKOH,Park-Ohio Holdings Corp. - Common Stock,NASDAQ
+NASDAQ,PLAB,PLAB,"Photronics, Inc. - Common Stock",NASDAQ
+NASDAQ,PLAY,PLAY,"Dave & Buster's Entertainment, Inc. - Common Stock",NASDAQ
+NASDAQ,PLBC,PLBC,Plumas Bancorp - Common Stock,NASDAQ
+NASDAQ,PLBL,PLBL,Polibeli Group Ltd - Class A Ordinary Shares,NASDAQ
+NASDAQ,PLBY,PLBY,"Playboy, Inc. - Common Stock",NASDAQ
+NASDAQ,PLCE,PLCE,"Children's Place, Inc. (The) - Common Stock",NASDAQ
+NASDAQ,PLMK,PLMK,Plum Acquisition Corp. IV - Class A Ordinary Shares,NASDAQ
+NASDAQ,PLMR,PLMR,"Palomar Holdings, Inc. - Common stock",NASDAQ
+NASDAQ,PLPC,PLPC,Preformed Line Products Company - Common Stock,NASDAQ
+NASDAQ,PLRX,PLRX,"Pliant Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,PLRZ,PLRZ,Polyrizon Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PLSE,PLSE,"Pulse Biosciences, Inc - Common Stock",NASDAQ
+NASDAQ,PLSM,PLSM,Pulsenmore Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PLTK,PLTK,Playtika Holding Corp. - Common Stock,NASDAQ
+NASDAQ,PLTR,PLTR,Palantir Technologies Inc. - Class A Common Stock,NASDAQ;SP500
+NASDAQ,PLTS,PLTS,Platinum Analytics Cayman Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,PLUG,PLUG,"Plug Power, Inc. - Common Stock",NASDAQ
+NASDAQ,PLUR,PLUR,Pluri Inc. - Common Stock,NASDAQ
+NASDAQ,PLUS,PLUS,ePlus inc. - Common Stock,NASDAQ
+NASDAQ,PLUT,PLUT,Plutus Financial Group Limited - Ordinary Shares,NASDAQ
+NASDAQ,PLXS,PLXS,Plexus Corp. - Common Stock,NASDAQ
+NASDAQ,PLYX,PLYX,"Polaryx Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,PMAX,PMAX,Powell Max Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,PMCB,PMCB,"PharmaCyte Biotech, Inc. - Common Stock",NASDAQ
+NASDAQ,PMEC,PMEC,Primech Holdings Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PMN,PMN,ProMIS Neurosciences Inc. - Common Shares,NASDAQ
+NASDAQ,PMTR,PMTR,Perimeter Acquisition Corp. I - Class A Ordinary Shares,NASDAQ
+NASDAQ,PMTS,PMTS,CPI Card Group Inc. - Common Stock,NASDAQ
+NASDAQ,PMVP,PMVP,"PMV Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,PN,PN,Skycorp Solar Group Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,PNBK,PNBK,Patriot National Bancorp Inc. - Common Stock,NASDAQ
+NASDAQ,PNRG,PNRG,PrimeEnergy Resources Corporation - Common Stock,NASDAQ
+NASDAQ,PNTG,PNTG,"The Pennant Group, Inc. - Common Stock",NASDAQ
+NASDAQ,POCI,POCI,"Precision Optics Corporation, Inc. - Common stock",NASDAQ
+NASDAQ,PODC,PODC,"PodcastOne, Inc. - Common Stock",NASDAQ
+NASDAQ,PODD,PODD,Insulet Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,POET,POET,POET Technologies Inc. - Common Shares,NASDAQ
+NASDAQ,POLA,POLA,"Polar Power, Inc. - Common Stock",NASDAQ
+NASDAQ,POLE,POLE,Andretti Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
+NASDAQ,POM,POM,POMDOCTOR LIMITED - American Depositary Shares,NASDAQ
+NASDAQ,PONY,PONY,Pony AI Inc. - American Depositary Shares,NASDAQ
+NASDAQ,POOL,POOL,Pool Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,POWI,POWI,"Power Integrations, Inc. - Common Stock",NASDAQ
+NASDAQ,POWL,POWL,"Powell Industries, Inc. - Common Stock",NASDAQ
+NASDAQ,POWW,POWW,Outdoor Holding Company - Common Stock,NASDAQ
+NASDAQ,PPBT,PPBT,Purple Biotech Ltd. - American Depositary Shares,NASDAQ
+NASDAQ,PPC,PPC,Pilgrim's Pride Corporation - Common Stock,NASDAQ
+NASDAQ,PPCB,PPCB,"Propanc Biopharma, Inc. - Common Stock",NASDAQ
+NASDAQ,PPHC,PPHC,"Public Policy Holding Company, Inc. - Common Stock",NASDAQ
+NASDAQ,PPIH,PPIH,"Perma-Pipe International Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,PPSI,PPSI,"Pioneer Power Solutions, Inc. - Common Stock",NASDAQ
+NASDAQ,PPTA,PPTA,Perpetua Resources Corp. - Common Shares,NASDAQ
+NASDAQ,PRAA,PRAA,"PRA Group, Inc. - Common Stock",NASDAQ
+NASDAQ,PRAX,PRAX,"Praxis Precision Medicines, Inc. - Common Stock",NASDAQ
+NASDAQ,PRCH,PRCH,"Porch Group, Inc. - Common Stock",NASDAQ
+NASDAQ,PRCT,PRCT,PROCEPT BioRobotics Corporation - Common Stock,NASDAQ
+NASDAQ,PRDO,PRDO,Perdoceo Education Corporation - Common Stock,NASDAQ
+NASDAQ,PRE,PRE,Prenetics Global Limited - Class A Ordinary Share,NASDAQ
+NASDAQ,PRFX,PRFX,PRF Technologies Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PRGS,PRGS,Progress Software Corporation - Common Stock,NASDAQ
+NASDAQ,PRHI,PRHI,"Presurance Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,PRLD,PRLD,Prelude Therapeutics Incorporated - Common Stock,NASDAQ
+NASDAQ,PRME,PRME,"Prime Medicine, Inc. - Common Stock",NASDAQ
+NASDAQ,PROF,PROF,Profound Medical Corp. - common stock,NASDAQ
+NASDAQ,PROK,PROK,ProKidney Corp. - Class A Ordinary Shares,NASDAQ
+NASDAQ,PROP,PROP,Prairie Operating Co. - Common Stock,NASDAQ
+NASDAQ,PROV,PROV,"Provident Financial Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,PRPL,PRPL,"Purple Innovation, Inc. - Common Stock",NASDAQ
+NASDAQ,PRPO,PRPO,"Precipio, Inc. - Common Stock",NASDAQ
+NASDAQ,PRQR,PRQR,ProQR Therapeutics N.V. - Ordinary Shares,NASDAQ
+NASDAQ,PRSO,PRSO,Peraso Inc. - Common Stock,NASDAQ
+NASDAQ,PRTA,PRTA,Prothena Corporation plc - Ordinary Shares,NASDAQ
+NASDAQ,PRTC,PRTC,PureTech Health plc - American Depositary Shares,NASDAQ
+NASDAQ,PRTH,PRTH,"Priority Technology Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,PRTS,PRTS,"CarParts.com, Inc. - Common Stock",NASDAQ
+NASDAQ,PRVA,PRVA,"Privia Health Group, Inc. - Common Stock",NASDAQ
+NASDAQ,PRZO,PRZO,ParaZero Technologies Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PSHG,PSHG,Performance Shipping Inc. - Common Shares,NASDAQ
+NASDAQ,PSIG,PSIG,PS International Group Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PSIX,PSIX,"Power Solutions International, Inc. - Common Stock",NASDAQ
+NASDAQ,PSKY,PSKY,Paramount Skydance Corporation - Class B Common Stock,NASDAQ;SP500
+NASDAQ,PSMT,PSMT,"PriceSmart, Inc. - Common Stock",NASDAQ
+NASDAQ,PSNL,PSNL,"Personalis, Inc. - Common Stock",NASDAQ
+NASDAQ,PSNY,PSNY,Polestar Automotive Holding UK Limited - Class A ADS,NASDAQ
+NASDAQ,PSNYW,PSNYW,Polestar Automotive Holding UK Limited - Class C-1 ADS (ADW),NASDAQ
+NASDAQ,PSTV,PSTV,"PLUS THERAPEUTICS, Inc. - Common Stock",NASDAQ
+NASDAQ,PTCT,PTCT,"PTC Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,PTEN,PTEN,"Patterson-UTI Energy, Inc. - Common Stock",NASDAQ
+NASDAQ,PTGX,PTGX,"Protagonist Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,PTLE,PTLE,PTL LTD - Class A Ordinary Shares,NASDAQ
+NASDAQ,PTLO,PTLO,Portillo's Inc. - Class A Common Stock,NASDAQ
+NASDAQ,PTNM,PTNM,Pitanium Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,PTON,PTON,"Peloton Interactive, Inc. - Common Stock",NASDAQ
+NASDAQ,PTOR,PTOR,Praetorian Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+NASDAQ,PTRN,PTRN,Pattern Group Inc. - Series A Common Stock,NASDAQ
+NASDAQ,PUBM,PUBM,"PubMatic, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,PULM,PULM,"Pulmatrix, Inc. - Common Stock",NASDAQ
+NASDAQ,PURR,PURR,Hyperliquid Strategies Inc - Common Stock,NASDAQ
+NASDAQ,PVLA,PVLA,"Palvella Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,PWP,PWP,Perella Weinberg Partners - Class A Common Stock,NASDAQ
+NASDAQ,PXLW,PXLW,"Pixelworks, Inc. - Common Stock",NASDAQ
+NASDAQ,PXS,PXS,Pyxis Tankers Inc. - Common Stock,NASDAQ
+NASDAQ,PYPD,PYPD,PolyPid Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,PYPL,PYPL,"PayPal Holdings, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,PYXS,PYXS,"Pyxis Oncology, Inc. - Common Stock",NASDAQ
+NASDAQ,PZZA,PZZA,"Papa John's International, Inc. - Common Stock",NASDAQ
+NASDAQ,QCLS,QCLS,"Q/C Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,QCOM,QCOM,QUALCOMM Incorporated - Common Stock,NASDAQ;SP500
+NASDAQ,QCRH,QCRH,"QCR Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,QDEL,QDEL,QuidelOrtho Corporation - Common Stock,NASDAQ
+NASDAQ,QETA,QETA,Quetta Acquisition Corporation - Common Stock,NASDAQ
+NASDAQ,QFIN,QFIN,"Qfin Holdings, Inc. - American Depositary Shares",NASDAQ
+NASDAQ,QLYS,QLYS,"Qualys, Inc. - Common Stock",NASDAQ
+NASDAQ,QMCO,QMCO,Quantum Corporation - Common Stock,NASDAQ
+NASDAQ,QMMM,QMMM,QMMM Holdings Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,QNCX,QNCX,"Quince Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,QNRX,QNRX,"Quoin Pharmaceuticals, Ltd. - American Depositary Shares",NASDAQ
+NASDAQ,QNST,QNST,"QuinStreet, Inc. - Common Stock",NASDAQ
+NASDAQ,QRHC,QRHC,Quest Resource Holding Corporation - Common Stock,NASDAQ
+NASDAQ,QRVO,QRVO,"Qorvo, Inc. - Common Stock",NASDAQ
+NASDAQ,QS,QS,QuantumScape Corporation - Common Stock,NASDAQ
+NASDAQ,QSEA,QSEA,Quartzsea Acquisition Corporation - Ordinary Shares,NASDAQ
+NASDAQ,QSI,QSI,Quantum-Si Incorporated - Class A Common Stock,NASDAQ
+NASDAQ,QTI,QTI,"QT Imaging Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,QTRX,QTRX,Quanterix Corporation - Common Stock,NASDAQ
+NASDAQ,QTTB,QTTB,Q32 Bio Inc. - Common Stock,NASDAQ
+NASDAQ,QUBT,QUBT,Quantum Computing Inc. - Common Stock,NASDAQ
+NASDAQ,QUCY,QUCY,Mainz Biomed N.V. - Ordinary Shares,NASDAQ
+NASDAQ,QUIK,QUIK,QuickLogic Corporation - Common Stock,NASDAQ
+NASDAQ,QUMS,QUMS,Quantumsphere Acquisition Corp. - Ordinary Shares,NASDAQ
+NASDAQ,QURE,QURE,uniQure N.V. - Ordinary Shares,NASDAQ
+NASDAQ,QVCGA,QVCGA,"QVC Group, Inc. - Series A Common Stock",NASDAQ
+NASDAQ,RAAQ,RAAQ,Real Asset Acquisition Corp. - Class A Ordinary Share,NASDAQ
+NASDAQ,RADX,RADX,Radiopharm Theranostics Limited - American Depositary Shares,NASDAQ
+NASDAQ,RAIL,RAIL,"Freightcar America, Inc. - Common Stock",NASDAQ
+NASDAQ,RAIN,RAIN,"Rain Enhancement Technologies Holdco, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RANG,RANG,Range Capital Acquisition Corp. - Ordinary Shares,NASDAQ
+NASDAQ,RANI,RANI,"Rani Therapeutics Holdings, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RAPP,RAPP,"Rapport Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RARE,RARE,Ultragenyx Pharmaceutical Inc. - Common Stock,NASDAQ
+NASDAQ,RAVE,RAVE,"Rave Restaurant Group, Inc. - Common Stock",NASDAQ
+NASDAQ,RAYA,RAYA,Erayak Power Solution Group Inc. - Class A Ordinary Shares,NASDAQ
+NASDAQ,RBBN,RBBN,Ribbon Communications Inc. - Common Stock,NASDAQ
+NASDAQ,RBCAA,RBCAA,"Republic Bancorp, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RBKB,RBKB,"Rhinebeck Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,RBNE,RBNE,Robin Energy Ltd. - Common Stock,NASDAQ
+NASDAQ,RCAT,RCAT,"Red Cat Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,RCEL,RCEL,"Avita Medical, Inc. - Common Stock",NASDAQ
+NASDAQ,RCKT,RCKT,"Rocket Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,RCKY,RCKY,"Rocky Brands, Inc. - Common Stock",NASDAQ
+NASDAQ,RCMT,RCMT,"RCM Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,RCON,RCON,"Recon Technology, Ltd. - Class A Ordinary Shares",NASDAQ
+NASDAQ,RCT,RCT,RedCloud Holdings plc - Ordinary Shares,NASDAQ
+NASDAQ,RDAC,RDAC,Rising Dragon Acquisition Corp. - Ordinary Shares,NASDAQ
+NASDAQ,RDAG,RDAG,Republic Digital Acquisition Company - Class A Ordinary Shares,NASDAQ
+NASDAQ,RDCM,RDCM,Radcom Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,RDGT,RDGT,"Ridgetech, Inc. - Ordinary Shares",NASDAQ
+NASDAQ,RDHL,RDHL,Redhill Biopharma Ltd. - American Depositary Shares,NASDAQ
+NASDAQ,RDI,RDI,Reading International Inc - Class A Non-voting Common Stock,NASDAQ
+NASDAQ,RDIB,RDIB,Reading International Inc - Class B Voting Common Stock,NASDAQ
+NASDAQ,RDNT,RDNT,"RadNet, Inc. - Common Stock",NASDAQ
+NASDAQ,RDNW,RDNW,"RideNow Group, Inc. - Class B Common Stock",NASDAQ
+NASDAQ,RDVT,RDVT,"Red Violet, Inc. - Common Stock",NASDAQ
+NASDAQ,RDWR,RDWR,Radware Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,RDZN,RDZN,"Roadzen, Inc. - Ordinary Shares",NASDAQ
+NASDAQ,REAL,REAL,"The RealReal, Inc. - Common Stock",NASDAQ
+NASDAQ,REAX,REAX,"The Real Brokerage, Inc. - Common Shares",NASDAQ
+NASDAQ,REBN,REBN,"Reborn Coffee, Inc. - Common Stock",NASDAQ
+NASDAQ,RECT,RECT,Rectitude Holdings Ltd - Ordinary Shares,NASDAQ
+NASDAQ,REE,REE,REE Automotive Ltd. - Class A Ordinary Shares,NASDAQ
+NASDAQ,REFI,REFI,"Chicago Atlantic Real Estate Finance, Inc. - Common Stock",NASDAQ
+NASDAQ,REFR,REFR,Research Frontiers Incorporated - Common Stock,NASDAQ
+NASDAQ,REG,REG,Regency Centers Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,REGN,REGN,"Regeneron Pharmaceuticals, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,REKR,REKR,"Rekor Systems, Inc. - Common Stock",NASDAQ
+NASDAQ,RELL,RELL,"Richardson Electronics, Ltd. - Common Stock",NASDAQ
+NASDAQ,RELY,RELY,"Remitly Global, Inc. - Common stock",NASDAQ
+NASDAQ,RENT,RENT,"Rent the Runway, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RENX,RENX,RenX Enterprises Corp. - Common Stock,NASDAQ
+NASDAQ,REPL,REPL,"Replimune Group, Inc. - Common Stock",NASDAQ
+NASDAQ,REVB,REVB,"Revelation Biosciences, Inc. - Common Stock",NASDAQ
+NASDAQ,REYN,REYN,Reynolds Consumer Products Inc. - Common Stock,NASDAQ
+NASDAQ,RFAI,RFAI,RF Acquisition Corp II - Ordinary Shares,NASDAQ
+NASDAQ,RFAM,RFAM,RF Acquisition Corp III - Ordinary Shares,NASDAQ
+NASDAQ,RFIL,RFIL,"RF Industries, Ltd. - Common Stock",NASDAQ
+NASDAQ,RGC,RGC,Regencell Bioscience Holdings Limited - Ordinary Shares,NASDAQ
+NASDAQ,RGCO,RGCO,RGC Resources Inc. - Common Stock,NASDAQ
+NASDAQ,RGEN,RGEN,Repligen Corporation - Common Stock,NASDAQ
+NASDAQ,RGLD,RGLD,"Royal Gold, Inc. - Common Stock",NASDAQ
+NASDAQ,RGNX,RGNX,REGENXBIO Inc. - Common Stock,NASDAQ
+NASDAQ,RGP,RGP,"Resources Connection, Inc. - Common Stock",NASDAQ
+NASDAQ,RGS,RGS,Regis Corporation - Common Stock,NASDAQ
+NASDAQ,RGTI,RGTI,"Rigetti Computing, Inc. - Common stock",NASDAQ
+NASDAQ,RIBB,RIBB,Ribbon Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,RICK,RICK,"RCI Hospitality Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,RIGL,RIGL,"Rigel Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,RILY,RILY,"BRC Group Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,RIME,RIME,"Algorhythm Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,RIOT,RIOT,"Riot Platforms, Inc. - Common Stock",NASDAQ
+NASDAQ,RITR,RITR,Reitar Logtech Holdings Limited - Ordinary shares,NASDAQ
+NASDAQ,RIVN,RIVN,"Rivian Automotive, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RJET,RJET,Republic Airways Holdings Inc. - Common Stock,NASDAQ
+NASDAQ,RKDA,RKDA,"Arcadia Biosciences, Inc. - Common Stock",NASDAQ
+NASDAQ,RKLB,RKLB,Rocket Lab Corporation - Common Stock,NASDAQ
+NASDAQ,RLAY,RLAY,"Relay Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RLMD,RLMD,"Relmada Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RLYB,RLYB,Rallybio Corporation - Common Stock,NASDAQ
+NASDAQ,RMBI,RMBI,"Richmond Mutual Bancorporation, Inc. - Common Stock",NASDAQ
+NASDAQ,RMBS,RMBS,"Rambus, Inc. - Common Stock",NASDAQ
+NASDAQ,RMCF,RMCF,"Rocky Mountain Chocolate Factory, Inc. - Common Stock",NASDAQ
+NASDAQ,RMCO,RMCO,Royalty Management Holding Corporation - Class A Common Stock,NASDAQ
+NASDAQ,RMIX,RMIX,"Suncrete, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RMNI,RMNI,"Rimini Street, Inc. - Common Stock",NASDAQ
+NASDAQ,RMR,RMR,The RMR Group Inc. - Class A Common Stock,NASDAQ
+NASDAQ,RMSG,RMSG,Real Messenger Corporation - Ordinary Shares,NASDAQ
+NASDAQ,RMTI,RMTI,"Rockwell Medical, Inc. - Common Stock",NASDAQ
+NASDAQ,RNA,RNA,"Atrium Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RNAC,RNAC,"Cartesian Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RNAZ,RNAZ,"TransCode Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RNGT,RNGT,Range Capital Acquisition Corp II - Class A Ordinary Shares,NASDAQ
+NASDAQ,RNTX,RNTX,"Rein Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,RNXT,RNXT,"RenovoRx, Inc. - Common Stock",NASDAQ
+NASDAQ,ROAD,ROAD,"Construction Partners, Inc. - Common Stock",NASDAQ
+NASDAQ,ROC,ROC,Rank One Computing Corporation - Common stock,NASDAQ
+NASDAQ,ROCK,ROCK,"Gibraltar Industries, Inc. - Common Stock",NASDAQ
+NASDAQ,ROIV,ROIV,Roivant Sciences Ltd. - Common Shares,NASDAQ
+NASDAQ,ROKU,ROKU,"Roku, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,ROMA,ROMA,Roma Green Finance Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,ROOT,ROOT,"Root, Inc. - Common Stock",NASDAQ
+NASDAQ,ROP,ROP,"Roper Technologies, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,ROST,ROST,"Ross Stores, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,RPAY,RPAY,Repay Holdings Corporation - Class A Common Stock,NASDAQ
+NASDAQ,RPGL,RPGL,Republic Power Group Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,RPID,RPID,"Rapid Micro Biosystems, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RPRX,RPRX,Royalty Pharma plc - Class A Ordinary Shares,NASDAQ
+NASDAQ,RR,RR,Richtech Robotics Inc. - Class B Common Stock,NASDAQ
+NASDAQ,RRBI,RRBI,"Red River Bancshares, Inc. - Common Stock",NASDAQ
+NASDAQ,RRGB,RRGB,"Red Robin Gourmet Burgers, Inc. - Common Stock",NASDAQ
+NASDAQ,RRR,RRR,"Red Rock Resorts, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RSSS,RSSS,"Research Solutions, Inc - Common Stock",NASDAQ
+NASDAQ,RSVR,RSVR,"Reservoir Media, Inc.. - Common Stock",NASDAQ
+NASDAQ,RTAC,RTAC,Renatus Tactical Acquisition Corp I - Class A Ordinary Shares,NASDAQ
+NASDAQ,RUBI,RUBI,Rubico Inc. - Common Stock,NASDAQ
+NASDAQ,RUM,RUM,Rumble Inc. - Class A Common Stock,NASDAQ
+NASDAQ,RUN,RUN,Sunrun Inc. - Common Stock,NASDAQ
+NASDAQ,RUSHA,RUSHA,"Rush Enterprises, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RUSHB,RUSHB,"Rush Enterprises, Inc. - Class B Common Stock",NASDAQ
+NASDAQ,RVMD,RVMD,"Revolution Medicines, Inc. - Common Stock",NASDAQ
+NASDAQ,RVPH,RVPH,"Reviva Pharmaceuticals Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,RVSB,RVSB,Riverview Bancorp Inc - Common Stock,NASDAQ
+NASDAQ,RVSN,RVSN,Rail Vision Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,RVYL,RVYL,Ryvyl Inc. - Common Stock,NASDAQ
+NASDAQ,RWAY,RWAY,Runway Growth Finance Corp. - Common Stock,NASDAQ
+NASDAQ,RXRX,RXRX,"Recursion Pharmaceuticals, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,RXST,RXST,"RxSight, Inc. - Common Stock",NASDAQ
+NASDAQ,RXT,RXT,"Rackspace Technology, Inc. - Common Stock",NASDAQ
+NASDAQ,RYAAY,RYAAY,"Ryanair Holdings plc - American Depositary Shares, each representing five Ordinary Shares",NASDAQ
+NASDAQ,RYET,RYET,Ruanyun Edai Technology Inc. - Ordinary shares,NASDAQ
+NASDAQ,RYM,RYM,"RYTHM, Inc. - Common Stock",NASDAQ
+NASDAQ,RYOJ,RYOJ,"rYojbaba Co., Ltd. - Common Shares",NASDAQ
+NASDAQ,RYTM,RYTM,"Rhythm Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,RZLT,RZLT,"Rezolute, Inc. - Common Stock (NV)",NASDAQ
+NASDAQ,RZLV,RZLV,Rezolve AI PLC - Ordinary Shares,NASDAQ
+NASDAQ,SAAQ,SAAQ,Space Asset Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+NASDAQ,SABR,SABR,Sabre Corporation - Common Stock,NASDAQ
+NASDAQ,SABS,SABS,"SAB Biotherapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,SAFT,SAFT,"Safety Insurance Group, Inc. - Common Stock",NASDAQ
+NASDAQ,SAFX,SAFX,"XCF Global, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SAGT,SAGT,SAGTEC GLOBAL LIMITED - Class A Ordinary shares,NASDAQ
+NASDAQ,SAIA,SAIA,"Saia, Inc. - Common Stock",NASDAQ
+NASDAQ,SAIC,SAIC,Science Applications International Corporation - Common Stock,NASDAQ
+NASDAQ,SAIH,SAIH,SAIHEAT Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,SAIL,SAIL,"SailPoint, Inc. - Common Stock",NASDAQ
+NASDAQ,SAMG,SAMG,Silvercrest Asset Management Group Inc. - Common Stock,NASDAQ
+NASDAQ,SANA,SANA,"Sana Biotechnology, Inc. - Common Stock",NASDAQ
+NASDAQ,SANG,SANG,Sangoma Technologies Corporation - Common Shares,NASDAQ
+NASDAQ,SANM,SANM,Sanmina Corporation - Common Stock,NASDAQ
+NASDAQ,SATL,SATL,Satellogic Inc. - Class A Common Stock,NASDAQ
+NASDAQ,SATS,SATS,EchoStar Corporation - Common stock,NASDAQ;SP500
+NASDAQ,SBAC,SBAC,SBA Communications Corporation - Class A Common Stock,NASDAQ;SP500
+NASDAQ,SBC,SBC,SBC Medical Group Holdings Incorporated - Common Stock,NASDAQ
+NASDAQ,SBCF,SBCF,Seacoast Banking Corporation of Florida - Common Stock,NASDAQ
+NASDAQ,SBET,SBET,"Sharplink, Inc. - Common Stock",NASDAQ
+NASDAQ,SBFG,SBFG,"SB Financial Group, Inc. - Common Stock",NASDAQ
+NASDAQ,SBFM,SBFM,Sunshine Biopharma Inc. - Common stock,NASDAQ
+NASDAQ,SBGI,SBGI,"Sinclair, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SBLK,SBLK,Star Bulk Carriers Corp. - Common Shares,NASDAQ
+NASDAQ,SBLX,SBLX,"StableX Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,SBRA,SBRA,"Sabra Health Care REIT, Inc. - Common Stock",NASDAQ
+NASDAQ,SBUX,SBUX,Starbucks Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,SCAG,SCAG,Scage Future - American Depositary Shares,NASDAQ
+NASDAQ,SCHL,SCHL,Scholastic Corporation - Common Stock,NASDAQ
+NASDAQ,SCII,SCII,SC II Acquisition Corp. - Class A ordinary share,NASDAQ
+NASDAQ,SCKT,SCKT,"Socket Mobile, Inc. - Common Stock",NASDAQ
+NASDAQ,SCLX,SCLX,Scilex Holding Company - Common Stock,NASDAQ
+NASDAQ,SCNI,SCNI,Scinai Immunotherapeutics Ltd. - American Depositary Shares,NASDAQ
+NASDAQ,SCNX,SCNX,"Scienture Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,SCOR,SCOR,"comScore, Inc. - Common Stock",NASDAQ
+NASDAQ,SCPQ,SCPQ,Social Commerce Partners Corporation - Class A Ordinary Shares,NASDAQ
+NASDAQ,SCSC,SCSC,"ScanSource, Inc. - Common Stock",NASDAQ
+NASDAQ,SCVL,SCVL,"Shoe Carnival, Inc. - Common Stock",NASDAQ
+NASDAQ,SCWO,SCWO,374Water Inc. - common stock,NASDAQ
+NASDAQ,SCYX,SCYX,"SCYNEXIS, Inc. - Common Stock",NASDAQ
+NASDAQ,SCZM,SCZM,Santacruz Silver Mining Ltd. - Common Shares,NASDAQ
+NASDAQ,SDGR,SDGR,"Schrodinger, Inc. - Common Stock",NASDAQ
+NASDAQ,SDHI,SDHI,Siddhi Acquisition Corp - Class A Common stock,NASDAQ
+NASDAQ,SDM,SDM,Smart Digital Group Limited - Ordinary Shares,NASDAQ
+NASDAQ,SDOT,SDOT,Sadot Group Inc. - Common Stock,NASDAQ
+NASDAQ,SDST,SDST,Stardust Power Inc. - Common Stock,NASDAQ
+NASDAQ,SEAT,SEAT,Vivid Seats Inc. - Class A common stock,NASDAQ
+NASDAQ,SEDG,SEDG,"SolarEdge Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,SEED,SEED,Origin Agritech Limited - Ordinary Shares,NASDAQ
+NASDAQ,SEER,SEER,"Seer, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SEGG,SEGG,Sports Entertainment Gaming Global Corporation - Common Stock,NASDAQ
+NASDAQ,SEIC,SEIC,SEI Investments Company - Common Stock,NASDAQ
+NASDAQ,SELF,SELF,"Global Self Storage, Inc. - Common Stock",NASDAQ
+NASDAQ,SELX,SELX,Semilux International Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,SENEA,SENEA,Seneca Foods Corp. - Class A Common Stock,NASDAQ
+NASDAQ,SENEB,SENEB,Seneca Foods Corp. - Class B Common Stock,NASDAQ
+NASDAQ,SENS,SENS,"Senseonics Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,SEPN,SEPN,"Septerna, Inc. - Common Stock",NASDAQ
+NASDAQ,SERA,SERA,"Sera Prognostics, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SERV,SERV,Serve Robotics Inc. - Common Stock,NASDAQ
+NASDAQ,SEV,SEV,Aptera Motors Corp. - Class B Common Stock,NASDAQ
+NASDAQ,SEZL,SEZL,Sezzle Inc. - Common Stock,NASDAQ
+NASDAQ,SFBC,SFBC,"Sound Financial Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,SFD,SFD,"Smithfield Foods, Inc. - Common Stock",NASDAQ
+NASDAQ,SFHG,SFHG,Samfine Creation Holdings Group Limited - Class A Ordinary Share,NASDAQ
+NASDAQ,SFIX,SFIX,"Stitch Fix, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SFM,SFM,"Sprouts Farmers Market, Inc. - Common Stock",NASDAQ
+NASDAQ,SFNC,SFNC,Simmons First National Corporation - Common Stock,NASDAQ
+NASDAQ,SFST,SFST,"Southern First Bancshares, Inc. - Common Stock",NASDAQ
+NASDAQ,SFWL,SFWL,Shengfeng Development Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,SGA,SGA,"Saga Communications, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SGC,SGC,"Superior Group of Companies, Inc. - Common Stock",NASDAQ
+NASDAQ,SGHT,SGHT,"Sight Sciences, Inc. - Common Stock",NASDAQ
+NASDAQ,SGLY,SGLY,Singularity Future Technology Ltd. - Common Stock,NASDAQ
+NASDAQ,SGML,SGML,Sigma Lithium Corporation - common shares,NASDAQ
+NASDAQ,SGMO,SGMO,"Sangamo Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,SGMT,SGMT,Sagimet Biosciences Inc. - Series A Common Stock,NASDAQ
+NASDAQ,SGP,SGP,"SpyGlass Pharma, Inc. - Common Stock",NASDAQ
+NASDAQ,SGRP,SGRP,"SPAR Group, Inc. - Common Stock",NASDAQ
+NASDAQ,SGRY,SGRY,"Surgery Partners, Inc. - Common Stock",NASDAQ
+NASDAQ,SHAZ,SHAZ,"SharonAI Holdings, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SHBI,SHBI,"Shore Bancshares, Inc. - Common Stock",NASDAQ
+NASDAQ,SHC,SHC,Sotera Health Company - Common Stock,NASDAQ
+NASDAQ,SHEN,SHEN,Shenandoah Telecommunications Co - Common Stock,NASDAQ
+NASDAQ,SHFS,SHFS,"SHF Holdings, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SHIM,SHIM,Shimmick Corporation - Common Stock,NASDAQ
+NASDAQ,SHIP,SHIP,Seanergy Maritime Holdings Corp. - Common Stock,NASDAQ
+NASDAQ,SHLS,SHLS,"Shoals Technologies Group, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SHMD,SHMD,SCHMID Group N.V. - Class A Ordinary Shares,NASDAQ
+NASDAQ,SHOO,SHOO,"Steven Madden, Ltd. - Common Stock",NASDAQ
+NASDAQ,SHPH,SHPH,"Shuttle Pharmaceuticals Holdings, Inc. - common stock",NASDAQ
+NASDAQ,SIBN,SIBN,"SI-BONE, Inc. - Common Stock",NASDAQ
+NASDAQ,SIDU,SIDU,"Sidus Space, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SIEB,SIEB,Siebert Financial Corp. - Common Stock,NASDAQ
+NASDAQ,SIGA,SIGA,SIGA Technologies Inc. - Common Stock,NASDAQ
+NASDAQ,SIGI,SIGI,"Selective Insurance Group, Inc. - Common Stock",NASDAQ
+NASDAQ,SILC,SILC,Silicom Ltd - Ordinary Shares,NASDAQ
+NASDAQ,SILO,SILO,"Silo Pharma, Inc. - Common Stock",NASDAQ
+NASDAQ,SIMA,SIMA,SIM Acquisition Corp. I - Class A Ordinary Shares,NASDAQ
+NASDAQ,SIMO,SIMO,"Silicon Motion Technology Corporation - American Depositary Shares, each representing four ordinary shares",NASDAQ
+NASDAQ,SINT,SINT,"SiNtx Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,SION,SION,"Sionna Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,SIRI,SIRI,SiriusXM Holdings Inc. - Common Stock,NASDAQ
+NASDAQ,SITM,SITM,SiTime Corporation - Common Stock,NASDAQ
+NASDAQ,SJ,SJ,Scienjoy Holding Corporation - Class A Ordinary Shares,NASDAQ
+NASDAQ,SKBL,SKBL,Skyline Builders Group Holding Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,SKIN,SKIN,The Beauty Health Company - Class A Common Stock,NASDAQ
+NASDAQ,SKK,SKK,SKK Holdings Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,SKWD,SKWD,"Skyward Specialty Insurance Group, Inc. - Common Stock",NASDAQ
+NASDAQ,SKYE,SKYE,"Skye Bioscience, Inc. - Common Stock",NASDAQ
+NASDAQ,SKYQ,SKYQ,Sky Quarry Inc. - Common Stock,NASDAQ
+NASDAQ,SKYT,SKYT,"SkyWater Technology, Inc. - Common Stock",NASDAQ
+NASDAQ,SKYW,SKYW,"SkyWest, Inc. - Common Stock",NASDAQ
+NASDAQ,SKYX,SKYX,SKYX Platforms Corp. - Common Stock,NASDAQ
+NASDAQ,SLAB,SLAB,"Silicon Laboratories, Inc. - Common Stock",NASDAQ
+NASDAQ,SLDB,SLDB,Solid Biosciences Inc. - Common Stock,NASDAQ
+NASDAQ,SLDE,SLDE,"Slide Insurance Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,SLDP,SLDP,"Solid Power, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SLE,SLE,"Super League Enterprise, Inc. - Common Stock",NASDAQ
+NASDAQ,SLGB,SLGB,Smart Logistics Global Limited - Ordinary Shares,NASDAQ
+NASDAQ,SLGL,SLGL,Sol-Gel Technologies Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,SLM,SLM,SLM Corporation - Common Stock,NASDAQ
+NASDAQ,SLMT,SLMT,Brera Holdings PLC - Class B Ordinary Shares,NASDAQ
+NASDAQ,SLNG,SLNG,"Stabilis Solutions, Inc. - Common Stock",NASDAQ
+NASDAQ,SLNH,SLNH,"Soluna Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,SLNO,SLNO,"Soleno Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,SLP,SLP,"Simulations Plus, Inc. - Common Stock",NASDAQ
+NASDAQ,SLSN,SLSN,"Solesence, Inc. - Common stock",NASDAQ
+NASDAQ,SLXN,SLXN,Silexion Therapeutics Corp - Ordinary Shares,NASDAQ
+NASDAQ,SMBC,SMBC,"Southern Missouri Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,SMCI,SMCI,"Super Micro Computer, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,SMID,SMID,Smith-Midland Corporation - Common Stock,NASDAQ
+NASDAQ,SMMT,SMMT,Summit Therapeutics Inc. - Common Stock,NASDAQ
+NASDAQ,SMPL,SMPL,The Simply Good Foods Company - Common Stock,NASDAQ
+NASDAQ,SMSI,SMSI,"Smith Micro Software, Inc. - Common Stock",NASDAQ
+NASDAQ,SMTC,SMTC,Semtech Corporation - Common Stock,NASDAQ
+NASDAQ,SMTI,SMTI,Sanara MedTech Inc. - Common Stock,NASDAQ
+NASDAQ,SMTK,SMTK,"SmartKem, Inc. - Common Stock",NASDAQ
+NASDAQ,SMX,SMX,SMX (Security Matters) Public Limited Company - Ordinary Shares,NASDAQ
+NASDAQ,SMXT,SMXT,Solarmax Technology Inc. - Common Stock,NASDAQ
+NASDAQ,SNAL,SNAL,"Snail, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,SNBR,SNBR,Sleep Number Corporation - Common Stock,NASDAQ
+NASDAQ,SNCY,SNCY,"Sun Country Airlines Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,SND,SND,"Smart Sand, Inc. - Common Stock",NASDAQ
+NASDAQ,SNDK,SNDK,Sandisk Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,SNDL,SNDL,SNDL Inc. - Common Shares,NASDAQ
+NASDAQ,SNDX,SNDX,"Syndax Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,SNES,SNES,"SenesTech, Inc. - Common Stock",NASDAQ
+NASDAQ,SNEX,SNEX,StoneX Group Inc. - Common Stock,NASDAQ
+NASDAQ,SNFCA,SNFCA,Security National Financial Corporation - Class A Common Stock,NASDAQ
+NASDAQ,SNGX,SNGX,"Soligenix, Inc. - Common Stock",NASDAQ
+NASDAQ,SNOA,SNOA,"Sonoma Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,SNPS,SNPS,"Synopsys, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,SNSE,SNSE,"Sensei Biotherapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,SNT,SNT,Senstar Technologies Corporation - Common Shares,NASDAQ
+NASDAQ,SNTG,SNTG,Sentage Holdings Inc. - Class A Ordinary Shares,NASDAQ
+NASDAQ,SNTI,SNTI,"Senti Biosciences, Inc. - Common Stock",NASDAQ
+NASDAQ,SNWV,SNWV,"SANUWAVE Health, Inc. - Common Stock",NASDAQ
+NASDAQ,SNYR,SNYR,Synergy CHC Corp. - Common Stock,NASDAQ
+NASDAQ,SOBR,SOBR,"SOBR Safe, Inc. - Common Stock",NASDAQ
+NASDAQ,SOCA,SOCA,Solarius Capital Acquisition Corp. - Class A Ordinary Share,NASDAQ
+NASDAQ,SOFI,SOFI,"SoFi Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,SOGP,SOGP,Sound Group Inc. - American Depositary Shares,NASDAQ
+NASDAQ,SOHU,SOHU,Sohu.com Limited - American Depositary Shares,NASDAQ
+NASDAQ,SOLS,SOLS,Solstice Advanced Materials Inc. - Common Stock,NASDAQ
+NASDAQ,SONM,SONM,"DNA X, Inc. - Common Stock",NASDAQ
+NASDAQ,SONO,SONO,"Sonos, Inc. - Common Stock",NASDAQ
+NASDAQ,SOPA,SOPA,Society Pass Incorporated - Common Stock,NASDAQ
+NASDAQ,SOPH,SOPH,SOPHiA GENETICS SA - Ordinary Shares,NASDAQ
+NASDAQ,SORA,SORA,AsiaStrategy - Ordinary Shares,NASDAQ
+NASDAQ,SORN,SORN,Soren Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+NASDAQ,SOTK,SOTK,Sono-Tek Corporation - Common Stock,NASDAQ
+NASDAQ,SOUN,SOUN,"SoundHound AI, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,TTAN,TTAN,"ServiceTitan, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,TTD,TTD,"The Trade Desk, Inc. - Class A Common Stock",NASDAQ;SP500
+NASDAQ,TTEC,TTEC,"TTEC Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,TTEK,TTEK,"Tetra Tech, Inc. - Common Stock",NASDAQ
+NASDAQ,TTGT,TTGT,"TechTarget, Inc. - Common Stock",NASDAQ
+NASDAQ,TTMI,TTMI,"TTM Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,TTRX,TTRX,Turn Therapeutics Inc. - Common Stock,NASDAQ
+NASDAQ,TTWO,TTWO,"Take-Two Interactive Software, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,TULP,TULP,"Bloomia Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,TURB,TURB,"Turbo Energy, S.A. - American Depositary Shares",NASDAQ
+NASDAQ,TUSK,TUSK,"Mammoth Energy Services, Inc. - Common Stock",NASDAQ
+NASDAQ,TVA,TVA,Texas Ventures Acquisition III Corp - Class A Ordinary Share,NASDAQ
+NASDAQ,TVAI,TVAI,Thayer Ventures Acquisition Corporation II - Class A Ordinary Shares,NASDAQ
+NASDAQ,TVGN,TVGN,Tevogen Bio Holdings Inc. - Common Stock,NASDAQ
+NASDAQ,TVRD,TVRD,"Tvardi Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,TVTX,TVTX,"Travere Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,TW,TW,Tradeweb Markets Inc. - Class A Common Stock,NASDAQ
+NASDAQ,TWAV,TWAV,"TaoWeave, Inc. - Common Stock",NASDAQ
+NASDAQ,TWFG,TWFG,"TWFG, Inc. - Common Stock",NASDAQ
+NASDAQ,TWG,TWG,Top Wealth Group Holding Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,TWIN,TWIN,"Twin Disc, Incorporated - Common Stock",NASDAQ
+NASDAQ,TWLV,TWLV,Twelve Seas Investment Company III - Class A Ordinary Shares,NASDAQ
+NASDAQ,TWST,TWST,Twist Bioscience Corporation - Common Stock,NASDAQ
+NASDAQ,TXG,TXG,"10x Genomics, Inc. - Common Stock",NASDAQ
+NASDAQ,TXMD,TXMD,"TherapeuticsMD, Inc. - Common Stock",NASDAQ
+NASDAQ,TXN,TXN,Texas Instruments Incorporated - Common Stock,NASDAQ;SP500
+NASDAQ,TXRH,TXRH,"Texas Roadhouse, Inc. - Common Stock",NASDAQ
+NASDAQ,TYGO,TYGO,"Tigo Energy, Inc. - Common Stock",NASDAQ
+NASDAQ,TYRA,TYRA,"Tyra Biosciences, Inc. - Common Stock",NASDAQ
+NASDAQ,TZOO,TZOO,Travelzoo - Common Stock,NASDAQ
+NASDAQ,UBXG,UBXG,U-BX Technology Ltd. - Class A Ordinary Shares,NASDAQ
+NASDAQ,UCAR,UCAR,U Power Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,UCFI,UCFI,CN Healthy Food Tech Group Corp. - Common Stock,NASDAQ
+NASDAQ,UCL,UCL,uCloudlink Group Inc. - American Depositary Shares,NASDAQ
+NASDAQ,UCTT,UCTT,"Ultra Clean Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,UDMY,UDMY,"Udemy, Inc. - Common Stock",NASDAQ
+NASDAQ,UEIC,UEIC,Universal Electronics Inc. - Common Stock,NASDAQ
+NASDAQ,UFG,UFG,Uni-Fuels Holdings Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,UFPI,UFPI,"UFP Industries, Inc. - Common Stock",NASDAQ
+NASDAQ,UFPT,UFPT,"UFP Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,UGRO,UGRO,"urban-gro, Inc. - Common Stock",NASDAQ
+NASDAQ,UK,UK,Ucommune International Ltd - Ordinary Shares,NASDAQ
+NASDAQ,ULBI,ULBI,Ultralife Corporation - Common Stock,NASDAQ
+NASDAQ,ULCC,ULCC,"Frontier Group Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,ULTA,ULTA,"Ulta Beauty, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,UMBF,UMBF,UMB Financial Corporation - Common Stock,NASDAQ
+NASDAQ,UNB,UNB,"Union Bankshares, Inc. - Common Stock",NASDAQ
+NASDAQ,UNCY,UNCY,"Unicycive Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,UONE,UONE,"Urban One, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,UONEK,UONEK,"Urban One, Inc. - Class D Common Stock",NASDAQ
+NASDAQ,UPB,UPB,"Upstream Bio, Inc. - Common Stock",NASDAQ
+NASDAQ,UPBD,UPBD,"Upbound Group, Inc. - Common Stock",NASDAQ
+NASDAQ,UPC,UPC,Universe Pharmaceuticals Inc - Class A Ordinary Shares,NASDAQ
+NASDAQ,UPLD,UPLD,"Upland Software, Inc. - Common Stock",NASDAQ
+NASDAQ,UPST,UPST,"Upstart Holdings, Inc. - Common stock",NASDAQ
+NASDAQ,UPWK,UPWK,Upwork Inc. - Common Stock,NASDAQ
+NASDAQ,UPXI,UPXI,"Upexi, Inc. - Common Stock",NASDAQ
+NASDAQ,URBN,URBN,"Urban Outfitters, Inc. - Common Stock",NASDAQ
+NASDAQ,URGN,URGN,UroGen Pharma Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,UROY,UROY,Uranium Royalty Corp. - Common Stock,NASDAQ
+NASDAQ,USAR,USAR,"USA Rare Earth, Inc. - Common Stock",NASDAQ
+NASDAQ,USAU,USAU,U.S. Gold Corp. - Common Stock,NASDAQ
+NASDAQ,USCB,USCB,"USCB Financial Holdings, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,USEG,USEG,U.S. Energy Corp. - Common Stock,NASDAQ
+NASDAQ,USGO,USGO,U.S. GoldMining Inc. - Common stock,NASDAQ
+NASDAQ,USIO,USIO,"Usio, Inc. - Common Stock",NASDAQ
+NASDAQ,UTMD,UTMD,"Utah Medical Products, Inc. - Common Stock",NASDAQ
+NASDAQ,UTSI,UTSI,UTStarcom Holdings Corp - Ordinary Shares,NASDAQ
+NASDAQ,UVSP,UVSP,Univest Financial Corporation - Common Stock,NASDAQ
+NASDAQ,UXIN,UXIN,Uxin Limited - American Depositary Shares,NASDAQ
+NASDAQ,UYSC,UYSC,UY Scuti Acquisition Corp. - Ordinary Shares,NASDAQ
+NASDAQ,VABK,VABK,Virginia National Bankshares Corporation - Common Stock,NASDAQ
+NASDAQ,VACH,VACH,Voyager Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,VALN,VALN,Valneva SE - American Depositary Shares,NASDAQ
+NASDAQ,VALU,VALU,"Value Line, Inc. - Common Stock",NASDAQ
+NASDAQ,VANI,VANI,"Vivani Medical, Inc. - Common Stock",NASDAQ
+NASDAQ,VBIX,VBIX,Viewbix Inc. - Common Stock,NASDAQ
+NASDAQ,VBNK,VBNK,VersaBank - Common Shares,NASDAQ
+NASDAQ,VC,VC,Visteon Corporation - Common Stock,NASDAQ
+NASDAQ,VCEL,VCEL,Vericel Corporation - Common Stock,NASDAQ
+NASDAQ,VCIG,VCIG,VCI Global Limited - Ordinary Share,NASDAQ
+NASDAQ,VCTR,VCTR,"Victory Capital Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,VCYT,VCYT,"Veracyte, Inc. - Common Stock",NASDAQ
+NASDAQ,VECO,VECO,Veeco Instruments Inc. - Common Stock,NASDAQ
+NASDAQ,VEEA,VEEA,Veea Inc. - Common Stock,NASDAQ
+NASDAQ,VEEE,VEEE,Twin Vee PowerCats Co. - Common Stock,NASDAQ
+NASDAQ,VELO,VELO,"Velo3D, Inc. - Common stock",NASDAQ
+NASDAQ,VEON,VEON,VEON Ltd. - American Depositary Shares,NASDAQ
+NASDAQ,VERA,VERA,"Vera Therapeutics, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VERI,VERI,"Veritone, Inc. - Common Stock",NASDAQ
+NASDAQ,VERU,VERU,Veru Inc. - Common Stock,NASDAQ
+NASDAQ,VERX,VERX,"Vertex, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VFF,VFF,"Village Farms International, Inc. - Common Shares",NASDAQ
+NASDAQ,VGAS,VGAS,"Verde Clean Fuels, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VHC,VHC,VirnetX Holding Corp - Common Stock,NASDAQ
+NASDAQ,VHCP,VHCP,Vine Hill Capital Investment Corp. II - Class A Ordinary Shares,NASDAQ
+NASDAQ,VHUB,VHUB,"VenHub Global, Inc. - Common Stock",NASDAQ
+NASDAQ,VIAV,VIAV,Viavi Solutions Inc. - Common Stock,NASDAQ
+NASDAQ,VICR,VICR,Vicor Corporation - Common Stock,NASDAQ
+NASDAQ,VINP,VINP,Vinci Compass Investments Ltd. - Class A Common Shares,NASDAQ
+NASDAQ,VIOT,VIOT,"Viomi Technology Co., Ltd - American Depositary Shares",NASDAQ
+NASDAQ,VIR,VIR,"Vir Biotechnology, Inc. - Common Stock",NASDAQ
+NASDAQ,VIRC,VIRC,Virco Manufacturing Corporation - Common Stock,NASDAQ
+NASDAQ,VISN,VISN,"Vistance Networks, Inc. - Common Stock",NASDAQ
+NASDAQ,VITL,VITL,"Vital Farms, Inc. - Common Stock",NASDAQ
+NASDAQ,VIVO,VIVO,VivoPower PLC - Ordinary Shares,NASDAQ
+NASDAQ,VIVS,VIVS,"VivoSim Labs, Inc. - Common Stock",NASDAQ
+NASDAQ,VKTX,VKTX,"Viking Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,VLGEA,VLGEA,"Village Super Market, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VLY,VLY,Valley National Bancorp - Common Stock,NASDAQ
+NASDAQ,VMAR,VMAR,Vision Marine Technologies Inc. - Common Shares,NASDAQ
+NASDAQ,VMD,VMD,"Viemed Healthcare, Inc. - Common Shares",NASDAQ
+NASDAQ,VMET,VMET,Versamet Royalties Corporation - Common Stock,NASDAQ
+NASDAQ,VNCE,VNCE,Vince Holding Corp. - Common Stock,NASDAQ
+NASDAQ,VNDA,VNDA,Vanda Pharmaceuticals Inc. - Common Stock,NASDAQ
+NASDAQ,VNET,VNET,"VNET Group, Inc. - American Depositary Shares",NASDAQ
+NASDAQ,VNME,VNME,Vendome Acquisition Corporation I - Class A Ordinary Shares,NASDAQ
+NASDAQ,VNOM,VNOM,"Viper Energy, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VOD,VOD,Vodafone Group Plc - American Depositary Shares each representing ten Ordinary Shares,NASDAQ
+NASDAQ,VOR,VOR,Vor Biopharma Inc. - Common Stock,NASDAQ
+NASDAQ,VOXR,VOXR,Vox Royalty Corp. - common stock,NASDAQ
+NASDAQ,VRA,VRA,"Vera Bradley, Inc. - Common Stock",NASDAQ
+NASDAQ,VRAX,VRAX,Virax Biolabs Group Limited - Ordinary Shares,NASDAQ
+NASDAQ,VRCA,VRCA,Verrica Pharmaceuticals Inc. - Common Stock,NASDAQ
+NASDAQ,VRDN,VRDN,"Viridian Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,VREX,VREX,Varex Imaging Corporation - Common Stock,NASDAQ
+NASDAQ,VRM,VRM,"Vroom, Inc. - Common Stock",NASDAQ
+NASDAQ,VRME,VRME,"VerifyMe, Inc. - Common Stock",NASDAQ
+NASDAQ,VRNS,VRNS,"Varonis Systems, Inc. - Common Stock",NASDAQ
+NASDAQ,VRRM,VRRM,Verra Mobility Corporation - Class A Common Stock,NASDAQ
+NASDAQ,VRSK,VRSK,"Verisk Analytics, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,VRSN,VRSN,"VeriSign, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,VRTX,VRTX,Vertex Pharmaceuticals Incorporated - Common Stock,NASDAQ;SP500
+NASDAQ,VS,VS,Versus Systems Inc. - Common Stock,NASDAQ
+NASDAQ,VSA,VSA,VisionSys AI Inc. - American Depositary Shares,NASDAQ
+NASDAQ,VSAT,VSAT,"ViaSat, Inc. - Common Stock",NASDAQ
+NASDAQ,VSEC,VSEC,VSE Corporation - Common Stock,NASDAQ
+NASDAQ,VSEE,VSEE,"VSee Health, Inc. - Common Stock",NASDAQ
+NASDAQ,VSME,VSME,VS Media Holdings Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,VSNT,VSNT,"Versant Media Group, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,VSTD,VSTD,Vestand Inc. - Class A Common Stock,NASDAQ
+NASDAQ,VSTM,VSTM,"Verastem, Inc. - Common Stock",NASDAQ
+NASDAQ,VTGN,VTGN,"Vistagen Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,VTIX,VTIX,Virtuix Holdings Inc. - Class A Common Stock,NASDAQ
+NASDAQ,VTRS,VTRS,Viatris Inc. - Common Stock,NASDAQ;SP500
+NASDAQ,VTSI,VTSI,"VirTra, Inc. - Common Stock",NASDAQ
+NASDAQ,VTVT,VTVT,vTv Therapeutics Inc. - Class A Common Stock,NASDAQ
+NASDAQ,VUZI,VUZI,Vuzix Corporation - Common Stock,NASDAQ
+NASDAQ,VVOS,VVOS,"Vivos Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,VWAV,VWAV,"VisionWave Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,VYGR,VYGR,"Voyager Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,VYNE,VYNE,VYNE Therapeutics Inc. - Common Stock,NASDAQ
+NASDAQ,WABC,WABC,Westamerica Bancorporation - Common Stock,NASDAQ
+NASDAQ,WAFD,WAFD,"WaFd, Inc. - Common Stock",NASDAQ
+NASDAQ,WAFU,WAFU,Wah Fu Education Group Limited - Ordinary Shares,NASDAQ
+NASDAQ,WAI,WAI,Top KingWin Ltd - Class A Ordinary Shares,NASDAQ
+NASDAQ,WALD,WALD,Waldencast plc - Class A Ordinary Share,NASDAQ
+NASDAQ,WATT,WATT,Energous Corporation - Common Stock,NASDAQ
+NASDAQ,WAVE,WAVE,Eco Wave Power Global AB (publ) - American Depositary Shares,NASDAQ
+NASDAQ,WAY,WAY,Waystar Holding Corp. - Common Stock,NASDAQ
+NASDAQ,WB,WB,Weibo Corporation - American Depositary Shares,NASDAQ
+NASDAQ,WBD,WBD,"Warner Bros. Discovery, Inc. - Series A Common Stock",NASDAQ;SP500
+NASDAQ,WBTN,WBTN,WEBTOON Entertainment Inc. - Common stock,NASDAQ
+NASDAQ,WBUY,WBUY,WEBUY GLOBAL LTD. - Class A Ordinary Shares,NASDAQ
+NASDAQ,WCT,WCT,Wellchange Holdings Company Limited - Class A Ordinary shares,NASDAQ
+NASDAQ,WDAY,WDAY,"Workday, Inc. - Class A Common Stock",NASDAQ;SP500
+NASDAQ,WDC,WDC,Western Digital Corporation - Common Stock,NASDAQ;SP500
+NASDAQ,WDFC,WDFC,WD-40 Company - Common Stock,NASDAQ
+NASDAQ,WEN,WEN,Wendy's Company (The) - Common Stock,NASDAQ
+NASDAQ,WENN,WENN,Wen Acquisition Corp - Class A Ordinary Shares,NASDAQ
+NASDAQ,WERN,WERN,"Werner Enterprises, Inc. - Common Stock",NASDAQ
+NASDAQ,WEST,WEST,Westrock Coffee Company - Common Stock,NASDAQ
+NASDAQ,WETH,WETH,Wetouch Technology Inc. - Common Stock,NASDAQ
+NASDAQ,WETO,WETO,Wetour Robotics Limited - Ordinary Shares,NASDAQ
+NASDAQ,WEYS,WEYS,"Weyco Group, Inc. - Common Stock",NASDAQ
+NASDAQ,WFCF,WFCF,"Where Food Comes From, Inc. - Common Stock",NASDAQ
+NASDAQ,WFF,WFF,WF Holding Limited - Ordinary Shares,NASDAQ
+NASDAQ,WFRD,WFRD,Weatherford International plc - Ordinary shares,NASDAQ
+NASDAQ,WGRX,WGRX,"Wellgistics Health, Inc. - Common Stock",NASDAQ
+NASDAQ,WGS,WGS,GeneDx Holdings Corp. - Class A Common Stock,NASDAQ
+NASDAQ,WHWK,WHWK,"Whitehawk Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,WILC,WILC,"G. Willi-Food International, Ltd. - Ordinary Shares",NASDAQ
+NASDAQ,WIMI,WIMI,WiMi Hologram Cloud Inc. - Class B Ordinary Shares,NASDAQ
+NASDAQ,WINA,WINA,Winmark Corporation - Common Stock,NASDAQ
+NASDAQ,WING,WING,Wingstop Inc. - Common Stock,NASDAQ
+NASDAQ,WIX,WIX,Wix.com Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,WKEY,WKEY,WISeKey International Holding Ltd - American Depositary Shares,NASDAQ
+NASDAQ,WKHS,WKHS,"Workhorse Group, Inc. - Common Stock",NASDAQ
+NASDAQ,WKSP,WKSP,"Worksport, Ltd. - Common Stock",NASDAQ
+NASDAQ,WLAC,WLAC,Willow Lane Acquisition Corp. - Class A Ordinary Shares,NASDAQ
+NASDAQ,WLDN,WLDN,"Willdan Group, Inc. - Common Stock",NASDAQ
+NASDAQ,WLDS,WLDS,Wearable Devices Ltd. - Ordinary Share,NASDAQ
+NASDAQ,WLFC,WLFC,Willis Lease Finance Corporation - Common Stock,NASDAQ
+NASDAQ,WLII,WLII,Willow Lane Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
+NASDAQ,WLTH,WLTH,Wealthfront Corporation - Common Stock,NASDAQ
+NASDAQ,WMG,WMG,Warner Music Group Corp. - Class A Common Stock,NASDAQ
+NASDAQ,WMT,WMT,Walmart Inc. - Common Stock,NASDAQ;SP500
+NASDAQ,WNEB,WNEB,"Western New England Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,WNW,WNW,Meiwu Technology Company Limited - Ordinary Shares,NASDAQ
+NASDAQ,WOK,WOK,WORK Medical Technology Group LTD - Class A Ordinary Shares,NASDAQ
+NASDAQ,WOOF,WOOF,"Petco Health and Wellness Company, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,WPRT,WPRT,Westport Fuel Systems Inc - Common Shares,NASDAQ
+NASDAQ,WRAP,WRAP,"Wrap Technologies, Inc. - Common Stock",NASDAQ
+NASDAQ,WRD,WRD,WeRide Inc. - American Depositary Shares,NASDAQ
+NASDAQ,WRLD,WRLD,World Acceptance Corporation - Common Stock,NASDAQ
+NASDAQ,WSBC,WSBC,"WesBanco, Inc. - Common Stock",NASDAQ
+NASDAQ,WSBF,WSBF,"Waterstone Financial, Inc. - Common Stock",NASDAQ
+NASDAQ,WSBK,WSBK,"Winchester Bancorp, Inc. - Common Stock",NASDAQ
+NASDAQ,WSC,WSC,WillScot Holdings Corporation - Class A Common Stock,NASDAQ
+NASDAQ,WSFS,WSFS,WSFS Financial Corporation - Common Stock,NASDAQ
+NASDAQ,WSHP,WSHP,WeShop Holdings Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,WSTN,WSTN,Westin Acquisition Corp - Class A Ordinary Share,NASDAQ
+NASDAQ,WTBA,WTBA,West Bancorporation - Common Stock,NASDAQ
+NASDAQ,WTF,WTF,Waton Financial Limited - Ordinary Shares,NASDAQ
+NASDAQ,WTG,WTG,Wintergreen Acquisition Corp. - Ordinary Shares,NASDAQ
+NASDAQ,WTO,WTO,UTime Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,WTW,WTW,Willis Towers Watson Public Limited Company - Ordinary Shares,NASDAQ;SP500
+NASDAQ,WULF,WULF,TeraWulf Inc. - Common Stock,NASDAQ
+NASDAQ,WVE,WVE,Wave Life Sciences Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,WVVI,WVVI,"Willamette Valley Vineyards, Inc. - Common Stock",NASDAQ
+NASDAQ,WW,WW,"WW International, Inc. - Common Stock",NASDAQ
+NASDAQ,WWD,WWD,"Woodward, Inc. - Common Stock",NASDAQ
+NASDAQ,WXM,WXM,WF International Limited - Ordinary Shares,NASDAQ
+NASDAQ,WYFI,WYFI,"WhiteFiber, Inc. - Ordinary Shares",NASDAQ
+NASDAQ,WYHG,WYHG,Wing Yip Food Holdings Group Limited - American Depositary Shares,NASDAQ
+NASDAQ,WYNN,WYNN,"Wynn Resorts, Limited - Common Stock",NASDAQ;SP500
+NASDAQ,XAIR,XAIR,"Beyond Air, Inc. - Common Stock",NASDAQ
+NASDAQ,XBIO,XBIO,"Xenetic Biosciences, Inc. - Common Stock",NASDAQ
+NASDAQ,XBIT,XBIT,XBiotech Inc. - Common Stock,NASDAQ
+NASDAQ,XBP,XBP,"XBP Global Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,XCBE,XCBE,X3 Acquisition Corp. Ltd. - Class A Ordinary Shares,NASDAQ
+NASDAQ,XCH,XCH,XCHG Limited - ADS,NASDAQ
+NASDAQ,XCUR,XCUR,"Exicure, Inc. - Common Stock",NASDAQ
+NASDAQ,XEL,XEL,Xcel Energy Inc. - Common Stock,NASDAQ;SP500
+NASDAQ,XELB,XELB,"Xcel Brands, Inc - Common Stock",NASDAQ
+NASDAQ,XENE,XENE,Xenon Pharmaceuticals Inc. - Common Shares,NASDAQ
+NASDAQ,XERS,XERS,"Xeris Biopharma Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,XFOR,XFOR,"X4 Pharmaceuticals, Inc. - Common Stock",NASDAQ
+NASDAQ,XGN,XGN,Exagen Inc. - Common Stock,NASDAQ
+NASDAQ,XHG,XHG,XChange TEC.INC - American Depositary Shares,NASDAQ
+NASDAQ,XHLD,XHLD,"TEN Holdings, Inc. - Common Stock",NASDAQ
+NASDAQ,XLO,XLO,"Xilio Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,XMTR,XMTR,"Xometry, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,XNCR,XNCR,"Xencor, Inc. - Common Stock",NASDAQ
+NASDAQ,XNET,XNET,Xunlei Limited - American Depositary Shares,NASDAQ
+NASDAQ,XOMA,XOMA,XOMA Royalty Corporation - Common Stock,NASDAQ
+NASDAQ,XOS,XOS,"Xos, Inc. - Common Stock",NASDAQ
+NASDAQ,XP,XP,XP Inc. - Class A Common Stock,NASDAQ
+NASDAQ,XPEL,XPEL,"XPEL, Inc. - Common Stock",NASDAQ
+NASDAQ,XPON,XPON,Expion360 Inc. - Common Stock,NASDAQ
+NASDAQ,XRAY,XRAY,DENTSPLY SIRONA Inc. - Common Stock,NASDAQ
+NASDAQ,XRPN,XRPN,Armada Acquisition Corp. II - Class A Ordinary Shares,NASDAQ
+NASDAQ,XRTX,XRTX,XORTX Therapeutics Inc. - Common Shares,NASDAQ
+NASDAQ,XRX,XRX,Xerox Holdings Corporation - Common Stock,NASDAQ
+NASDAQ,XSLL,XSLL,Xsolla SPAC 1 - Class A Ordinary Shares,NASDAQ
+NASDAQ,XTIA,XTIA,"XTI Aerospace, Inc. Common Stock - Common Stock",NASDAQ
+NASDAQ,XTLB,XTLB,XTL Biopharmaceuticals Ltd. - American Depositary Shares,NASDAQ
+NASDAQ,XWEL,XWEL,"XWELL, Inc. - Common Stock",NASDAQ
+NASDAQ,XWIN,XWIN,"XMAX, Inc. - Common Stock",NASDAQ
+NASDAQ,XXII,XXII,"22nd Century Group, Inc - Common Stock",NASDAQ
+NASDAQ,YAAS,YAAS,Youxin Technology Ltd - Class A Ordinary shares,NASDAQ
+NASDAQ,YB,YB,Yuanbao Inc. - American Depositary Shares,NASDAQ
+NASDAQ,YDDL,YDDL,One and One Green Technologies. INC - Class A Ordinary Shares,NASDAQ
+NASDAQ,YDES,YDES,YD Bio Limited - Ordinary Shares,NASDAQ
+NASDAQ,YDKG,YDKG,Yueda Digital Holding - Class A Ordinary Share,NASDAQ
+NASDAQ,YHC,YHC,LQR House Inc. - Common Stock,NASDAQ
+NASDAQ,YHGJ,YHGJ,Yunhong Green CTI Ltd. - Common Stock,NASDAQ
+NASDAQ,YHNA,YHNA,YHN Acquisition I Limited - Ordinary Shares,NASDAQ
+NASDAQ,YI,YI,"111, Inc. - American Depositary Shares",NASDAQ
+NASDAQ,YIBO,YIBO,Planet Image International Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,YMAT,YMAT,"J-Star Holding Co., Ltd. - Class A Ordinary Shares",NASDAQ
+NASDAQ,YMT,YMT,Yimutian Inc. - American Depositary Shares; each representing 25 Class A ordinary shares,NASDAQ
+NASDAQ,YOOV,YOOV,Concorde International Group Ltd - Class A Ordinary Shares,NASDAQ
+NASDAQ,YORW,YORW,The York Water Company - Common Stock,NASDAQ
+NASDAQ,YOUL,YOUL,Youlife Group Inc. - American Depositary Shares,NASDAQ
+NASDAQ,YQ,YQ,17 Education & Technology Group Inc. - American Depositary Shares,NASDAQ
+NASDAQ,YSXT,YSXT,"YSX Tech. Co., Ltd - Class A Ordinary Shares",NASDAQ
+NASDAQ,YTRA,YTRA,"Yatra Online, Inc. - Ordinary Shares",NASDAQ
+NASDAQ,YYAI,YYAI,AiRWA Inc. - Common Stock,NASDAQ
+NASDAQ,YYGH,YYGH,YY Group Holding Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZBAI,ZBAI,ATIF Holdings Limited - Ordinary Shares,NASDAQ
+NASDAQ,ZBAO,ZBAO,Zhibao Technology Inc. - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZBIO,ZBIO,"Zenas BioPharma, Inc. - Common Stock",NASDAQ
+NASDAQ,ZBRA,ZBRA,Zebra Technologies Corporation - Class A Common Stock,NASDAQ;SP500
+NASDAQ,ZCMD,ZCMD,Zhongchao Inc. - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZD,ZD,"Ziff Davis, Inc. - Common Stock",NASDAQ
+NASDAQ,ZDAI,ZDAI,"DirectBooking Technology Co., Ltd. - Class A Ordinary Shares",NASDAQ
+NASDAQ,ZENA,ZENA,"ZenaTech, Inc. - Common Stock",NASDAQ
+NASDAQ,ZG,ZG,"Zillow Group, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,ZION,ZION,Zions Bancorporation N.A. - Common Stock,NASDAQ
+NASDAQ,ZJK,ZJK,"ZJK Industrial Co., Ltd. - Class A Ordinary Shares",NASDAQ
+NASDAQ,ZJYL,ZJYL,JIN MEDICAL INTERNATIONAL LTD. - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZKIN,ZKIN,"ZK International Group Co., Ltd - Ordinary Share",NASDAQ
+NASDAQ,ZLAB,ZLAB,Zai Lab Limited - American Depositary Shares,NASDAQ
+NASDAQ,ZM,ZM,"Zoom Communications, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,ZNB,ZNB,Zeta Network Group - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZNTL,ZNTL,"Zentalis Pharmaceuticals, Inc. - common stock",NASDAQ
+NASDAQ,ZOOZ,ZOOZ,ZOOZ Strategy Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,ZS,ZS,"Zscaler, Inc. - Common Stock",NASDAQ
+NASDAQ,ZSPC,ZSPC,"zSpace, Inc. - Common stock",NASDAQ
+NASDAQ,ZSTK,ZSTK,ZeroStack Corp. - Common Stock,NASDAQ
+NASDAQ,ZTEK,ZTEK,Zentek Ltd. - common stock,NASDAQ
+NASDAQ,ZUMZ,ZUMZ,Zumiez Inc. - Common Stock,NASDAQ
+NASDAQ,ZURA,ZURA,Zura Bio Limited - Class A Ordinary shares,NASDAQ
+NASDAQ,ZVRA,ZVRA,"Zevra Therapeutics, Inc. - Common Stock",NASDAQ
+NASDAQ,ZYBT,ZYBT,Zhengye Biotechnology Holding Limited - Class A Ordinary Shares,NASDAQ
+NASDAQ,ZYME,ZYME,Zymeworks Inc. - Common Stock,NASDAQ
+SP500,NSC,NSC,Norfolk Southern,SP500
+SP500,NTRS,NTRS,Northern Trust,SP500
+SP500,NUE,NUE,Nucor,SP500
+SP500,NVR,NVR,"NVR, Inc.",SP500
+SP500,O,O,Realty Income,SP500
+SP500,OXY,OXY,Occidental Petroleum,SP500
+SP500,PCG,PCG,PG&E Corporation,SP500
+SP500,PEG,PEG,Public Service Enterprise Group,SP500
+SP500,PFE,PFE,Pfizer,SP500
+SP500,PG,PG,Procter & Gamble,SP500
+SP500,PGR,PGR,Progressive Corporation,SP500
+SP500,PH,PH,Parker Hannifin,SP500
+SP500,PHM,PHM,PulteGroup,SP500
+SP500,PKG,PKG,Packaging Corporation of America,SP500
+SP500,PLD,PLD,Prologis,SP500
+SP500,PM,PM,Philip Morris International,SP500
+SP500,PNC,PNC,PNC Financial Services,SP500
+SP500,PNW,PNW,Pinnacle West Capital,SP500
+SP500,PPL,PPL,PPL Corporation,SP500
+SP500,PSA,PSA,Public Storage,SP500
+SP500,PSX,PSX,Phillips 66,SP500
+SP500,PWR,PWR,Quanta Services,SP500
+SP500,Q,Q,Qnity Electronics,SP500
+SP500,RF,RF,Regions Financial Corporation,SP500
+SP500,RJF,RJF,Raymond James Financial,SP500
+SP500,RL,RL,Ralph Lauren Corporation,SP500
+SP500,RMD,RMD,ResMed,SP500
+SP500,ROK,ROK,Rockwell Automation,SP500
+SP500,ROL,ROL,"Rollins, Inc.",SP500
+SP500,RSG,RSG,Republic Services,SP500
+SP500,RTX,RTX,RTX Corporation,SP500
+SP500,RVTY,RVTY,Revvity,SP500
+SP500,SCHW,SCHW,Charles Schwab Corporation,SP500
+SP500,SHW,SHW,Sherwin-Williams,SP500
+SP500,SJM,SJM,J.M. Smucker Company (The),SP500
+SP500,SLB,SLB,Schlumberger,SP500
+SP500,SNA,SNA,Snap-on,SP500
+SP500,SO,SO,Southern Company,SP500
+SP500,SOLV,SOLV,Solventum,SP500
+SP500,TT,TT,Trane Technologies,SP500
+SP500,TXT,TXT,Textron,SP500
+SP500,TYL,TYL,Tyler Technologies,SP500
+SP500,UAL,UAL,United Airlines Holdings,SP500
+SP500,UBER,UBER,Uber,SP500
+SP500,UDR,UDR,"UDR, Inc.",SP500
+SP500,UNH,UNH,UnitedHealth Group,SP500
+SP500,UNP,UNP,Union Pacific Corporation,SP500
+SP500,URI,URI,United Rentals,SP500
+SP500,USB,USB,U.S. Bancorp,SP500
+SP500,V,V,Visa Inc.,SP500
+SP500,VICI,VICI,Vici Properties,SP500
+SP500,VLO,VLO,Valero Energy,SP500
+SP500,VLTO,VLTO,Veralto,SP500
+SP500,VMC,VMC,Vulcan Materials Company,SP500
+SP500,VRT,VRT,Vertiv,SP500
+SP500,VST,VST,Vistra Corp.,SP500
+SP500,VTR,VTR,Ventas,SP500
+SP500,VZ,VZ,Verizon,SP500
+SP500,WAB,WAB,Wabtec,SP500
+SP500,WAT,WAT,Waters Corporation,SP500
+SP500,WEC,WEC,WEC Energy Group,SP500
+SP500,WELL,WELL,Welltower,SP500
+SP500,WFC,WFC,Wells Fargo,SP500
+SP500,WM,WM,Waste Management,SP500
+SP500,WMB,WMB,Williams Companies,SP500
+SP500,WRB,WRB,W. R. Berkley Corporation,SP500
+SP500,WSM,WSM,"Williams-Sonoma, Inc.",SP500
+SP500,WST,WST,West Pharmaceutical Services,SP500
+SP500,WY,WY,Weyerhaeuser,SP500
+SP500,XOM,XOM,ExxonMobil,SP500
+SP500,XYL,XYL,Xylem Inc.,SP500
+SP500,XYZ,XYZ,"Block, Inc.",SP500
+SP500,YUM,YUM,Yum! Brands,SP500
+SP500,ZBH,ZBH,Zimmer Biomet,SP500
+SP500,ZTS,ZTS,Zoetis,SP500
