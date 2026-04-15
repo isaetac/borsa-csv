@@ -108,7 +108,7 @@ def fetch_batch_quotes(symbols: list[str]) -> list[dict]:
         symbols,
         asynchronous=True,
         max_workers=8,
-        timeout=10,
+        timeout=25,
         validate=False,
     )
 
@@ -132,7 +132,7 @@ def fetch_batch_price(symbols: list[str]) -> list[dict]:
         symbols,
         asynchronous=True,
         max_workers=8,
-        timeout=10,
+        timeout=25,
         validate=False,
     )
 
@@ -471,7 +471,16 @@ def main() -> None:
     quotes_1 = first_pass(symbols)
 
     if quotes_1.empty:
-        raise RuntimeError("İlk geçişten hiç veri dönmedi.")
+        print("UYARI: İlk geçişten hiç veri dönmedi, ikinci geçiş deneniyor...")
+        quotes_1 = second_pass(symbols[:SECOND_PASS_BATCH_SIZE * 5])
+        if quotes_1.empty:
+            print("UYARI: Yahoo Finance'e erişilemedi, TEFAS cache güncelleniyor...")
+            tefas_quotes = fetch_tefas_quotes(tefas_symbols)
+            if not tefas_quotes.empty:
+                final = build_output(universe, tefas_quotes)
+                final.to_csv(LATEST_CSV, index=False, encoding="utf-8-sig")
+                print("TEFAS cache ile kısmi güncelleme tamamlandı.")
+            raise SystemExit(0)
 
     got_price = set(
         quotes_1.loc[quotes_1["last"].notna(), "quote_symbol"].astype(str).tolist()
