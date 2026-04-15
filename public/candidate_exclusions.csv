@@ -1,2 +1,25 @@
 ﻿market,symbol,quote_symbol,display_name,universe_tags
+BIST,ARSAN,ARSAN.IS,ARSAN TEKSTİL TİCARET VE SANAYİ A.Ş.,BIST
+BIST,BASCM,BASCM.IS,BAŞTAŞ BAŞKENT ÇİMENTO SANAYİ VE TİCARET A.Ş.,BIST
+BIST,HATSN,HATSN.IS,HAT-SAN GEMİ İNŞAA BAKIM ONARIM DENİZ NAKLİYAT SANAYİ VE TİCARET A.Ş.,BIST
 BIST,SNKRN,SNKRN.IS,SENKRON SİBER GÜVENLİK YAZILIM VE BİLİŞİM ÇÖZÜMLERİ A.Ş.,BIST
+BIST,TAVHL,TAVHL.IS,TAV HAVALİMANLARI HOLDİNG A.Ş.,BIST
+BIST,YGYO,YGYO.IS,YEŞİL GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.,BIST
+NASDAQ,ADV,ADV,Advantage Solutions Inc. - Class A Common Stock,NASDAQ
+NASDAQ,ALGS,ALGS,"Aligos Therapeutics, Inc. - Common stock",NASDAQ
+NASDAQ,AMBR,AMBR,Amber International Holding Limited - American Depositary Shares,NASDAQ
+NASDAQ,AVAV,AVAV,"AeroVironment, Inc. - Common Stock",NASDAQ
+NASDAQ,CAMT,CAMT,Camtek Ltd. - Ordinary Shares,NASDAQ
+NASDAQ,CCRN,CCRN,"Cross Country Healthcare, Inc. - Common Stock",NASDAQ
+NASDAQ,CIVB,CIVB,"Civista Bancshares, Inc. - Common Stock",NASDAQ
+NASDAQ,CPSH,CPSH,CPS Technologies Corp. - Common Stock,NASDAQ
+NASDAQ,CSBR,CSBR,"Champions Oncology, Inc. - Common Stock",NASDAQ
+NASDAQ,CSCO,CSCO,"Cisco Systems, Inc. - Common Stock",NASDAQ;SP500
+NASDAQ,CSPI,CSPI,CSP Inc. - Common Stock,NASDAQ
+NASDAQ,CURI,CURI,CuriosityStream Inc. - Class A Common Stock,NASDAQ
+NASDAQ,CVV,CVV,CVD Equipment Corporation - Common Stock,NASDAQ
+NASDAQ,CXDO,CXDO,"Crexendo, Inc. - Common Stock",NASDAQ
+NASDAQ,CYAB,CYAB,"Cyabra, Inc. - Common Stock",NASDAQ
+SP500,ALL,ALL,Allstate,SP500
+SP500,CBOE,CBOE,Cboe Global Markets,SP500
+SP500,CIEN,CIEN,Ciena,SP500
