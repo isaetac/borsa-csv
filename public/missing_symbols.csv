@@ -1,4 +1,4 @@
 ﻿market,symbol,quote_symbol,display_name,universe_tags
 BIST,SNKRN,SNKRN.IS,SENKRON SİBER GÜVENLİK YAZILIM VE BİLİŞİM ÇÖZÜMLERİ A.Ş.,BIST
 BIST,YGYO,YGYO.IS,YEŞİL GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.,BIST
-NASDAQ,MMED,MMED,"MiniMed Group, Inc. - Common Stock",NASDAQ
+SP500,EFX,EFX,Equifax,SP500
