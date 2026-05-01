@@ -1,5 +1,11 @@
 ﻿market,symbol,quote_symbol,display_name,universe_tags
 BIST,SNKRN,SNKRN.IS,SENKRON SİBER GÜVENLİK YAZILIM VE BİLİŞİM ÇÖZÜMLERİ A.Ş.,BIST
 BIST,YGYO,YGYO.IS,YEŞİL GAYRİMENKUL YATIRIM ORTAKLIĞI A.Ş.,BIST
+NASDAQ,ANABV,ANABV,"AnaptysBio, Inc. - Common Stock When Issued",NASDAQ
+NASDAQ,ATON,ATON,AlphaTON Capital Corp. - Common Stock,NASDAQ
+NASDAQ,DHIL,DHIL,"Diamond Hill Investment Group, Inc. - Class A Common Stock",NASDAQ
+NASDAQ,HTBK,HTBK,Heritage Commerce Corp - Common Stock,NASDAQ
+NASDAQ,QVCGA,QVCGA,"QVC Group, Inc. - Series A Common Stock",NASDAQ
+NASDAQ,TRAXV,TRAXV,"First Tracks Biotherapeutics, Inc. - Ordinary Shares",NASDAQ
 TEFAS,BLG,BLG,AZİMUT PORTFÖY BİLGE SERBEST ÖZEL FON,TEFAS
 TEFAS,INR,INR,İŞ PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ) FON,TEFAS
